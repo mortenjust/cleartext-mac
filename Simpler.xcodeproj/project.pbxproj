@@ -12,6 +12,9 @@
 		C86C6F431C01A5EF00A21B0A /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C6F421C01A5EF00A21B0A /* Document.swift */; };
 		C86C6F451C01A5EF00A21B0A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C86C6F441C01A5EF00A21B0A /* Assets.xcassets */; };
 		C86C6F481C01A5EF00A21B0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C86C6F461C01A5EF00A21B0A /* Main.storyboard */; };
+		C86C6F501C01AAE600A21B0A /* SimplerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C6F4F1C01AAE600A21B0A /* SimplerTextView.swift */; };
+		C86C6F521C01AF7E00A21B0A /* SimpleWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C6F511C01AF7E00A21B0A /* SimpleWords.swift */; };
+		C86C6F541C01AFA700A21B0A /* simplewords.txt in Resources */ = {isa = PBXBuildFile; fileRef = C86C6F531C01AFA700A21B0A /* simplewords.txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +25,9 @@
 		C86C6F441C01A5EF00A21B0A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C86C6F471C01A5EF00A21B0A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C86C6F491C01A5EF00A21B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C86C6F4F1C01AAE600A21B0A /* SimplerTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplerTextView.swift; sourceTree = "<group>"; };
+		C86C6F511C01AF7E00A21B0A /* SimpleWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleWords.swift; sourceTree = "<group>"; };
+		C86C6F531C01AFA700A21B0A /* simplewords.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = simplewords.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +65,9 @@
 				C86C6F421C01A5EF00A21B0A /* Document.swift */,
 				C86C6F441C01A5EF00A21B0A /* Assets.xcassets */,
 				C86C6F461C01A5EF00A21B0A /* Main.storyboard */,
+				C86C6F511C01AF7E00A21B0A /* SimpleWords.swift */,
+				C86C6F531C01AFA700A21B0A /* simplewords.txt */,
+				C86C6F4F1C01AAE600A21B0A /* SimplerTextView.swift */,
 				C86C6F491C01A5EF00A21B0A /* Info.plist */,
 			);
 			path = Simpler;
@@ -123,6 +132,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C86C6F451C01A5EF00A21B0A /* Assets.xcassets in Resources */,
+				C86C6F541C01AFA700A21B0A /* simplewords.txt in Resources */,
 				C86C6F481C01A5EF00A21B0A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -134,8 +144,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C86C6F501C01AAE600A21B0A /* SimplerTextView.swift in Sources */,
 				C86C6F411C01A5EF00A21B0A /* ViewController.swift in Sources */,
 				C86C6F3F1C01A5EF00A21B0A /* AppDelegate.swift in Sources */,
+				C86C6F521C01AF7E00A21B0A /* SimpleWords.swift in Sources */,
 				C86C6F431C01A5EF00A21B0A /* Document.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
