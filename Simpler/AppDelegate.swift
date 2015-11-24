@@ -15,6 +15,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
     func applicationDidFinishLaunching(aNotification: NSNotification) {
         // Insert code here to initialize your application
+        
+        let ud = NSUserDefaults.standardUserDefaults()
+        ud.registerDefaults(C.defaultPrefValues)
+        
+        
     }
 
     func applicationWillTerminate(aNotification: NSNotification) {

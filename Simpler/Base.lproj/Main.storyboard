@@ -338,6 +338,25 @@
                                     </items>
                                 </menu>
                             </menuItem>
+                            <menuItem title="Bad words" id="Otg-Yy-uco">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <menu key="submenu" title="Bad words" id="VqR-mX-kEr">
+                                    <items>
+                                        <menuItem title="Make sound" state="on" id="dRo-Wd-GNh">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <binding destination="y4Y-3J-iBV" name="value" keyPath="values.makeSound" id="NSa-Lm-LKO"/>
+                                            </connections>
+                                        </menuItem>
+                                        <menuItem title="Remove immediately" state="on" id="q3O-zt-M5W">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <connections>
+                                                <binding destination="y4Y-3J-iBV" name="value" keyPath="values.removeImmediately" id="A8b-Mq-WDU"/>
+                                            </connections>
+                                        </menuItem>
+                                    </items>
+                                </menu>
+                            </menuItem>
                             <menuItem title="Format" id="jxT-CU-nIS">
                                 <modifierMask key="keyEquivalentModifierMask"/>
                                 <menu key="submenu" title="Format" id="GEO-Iw-cKr">
@@ -644,6 +663,7 @@
                 </application>
                 <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Simpler" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController representsSharedInstance="YES" id="y4Y-3J-iBV"/>
             </objects>
             <point key="canvasLocation" x="75" y="-135"/>
         </scene>
@@ -654,7 +674,7 @@
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="Ckk-yw-fiv">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
-                        <rect key="contentRect" x="196" y="240" width="480" height="270"/>
+                        <rect key="contentRect" x="196" y="240" width="480" height="500"/>
                         <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027"/>
                     </window>
                     <connections>
@@ -670,38 +690,32 @@
             <objects>
                 <viewController id="5gI-5U-AMq" customClass="ViewController" customModule="Simpler" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ERx-hH-rdd">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="485"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" misplaced="YES" preferredMaxLayoutWidth="246" translatesAutoresizingMaskIntoConstraints="NO" id="TyV-c9-G0C">
-                                <rect key="frame" x="115" y="124" width="250" height="22"/>
-                                <animations/>
-                                <textFieldCell key="cell" sendsActionOnEndEditing="YES" alignment="center" title="Your document contents here" id="Cc7-nU-5Mv">
-                                    <font key="font" metaFont="system" size="18"/>
-                                    <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
-                                </textFieldCell>
-                            </textField>
-                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" allowsMagnification="YES" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W98-6N-Cuw">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="light" translatesAutoresizingMaskIntoConstraints="NO" id="W98-6N-Cuw">
+                                <rect key="frame" x="0.0" y="0.0" width="480" height="438"/>
                                 <clipView key="contentView" id="wOx-7P-XnO">
-                                    <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="480" height="438"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="wst-9R-GU0" customClass="SimplerTextView" customModule="Simpler" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="480" height="438"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="480" height="270"/>
+                                            <size key="minSize" width="480" height="438"/>
                                             <size key="maxSize" width="499" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="480" height="270"/>
+                                            <size key="minSize" width="480" height="438"/>
                                             <size key="maxSize" width="499" height="10000000"/>
                                         </textView>
                                     </subviews>
                                     <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <userDefinedRuntimeAttributes>
+                                        <userDefinedRuntimeAttribute type="boolean" keyPath="wantsLayer" value="YES"/>
+                                    </userDefinedRuntimeAttributes>
                                 </clipView>
                                 <animations/>
                                 <edgeInsets key="contentInsets" left="20" right="20" top="20" bottom="20"/>
@@ -710,27 +724,31 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
-                                <scroller key="verticalScroller" verticalHuggingPriority="750" doubleValue="0.5" horizontal="NO" id="PKT-cy-04P">
-                                    <rect key="frame" x="444" y="20" width="16" height="230"/>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="PKT-cy-04P">
+                                    <rect key="frame" x="-100" y="-100" width="15" height="445"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="wantsLayer" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </scrollView>
                         </subviews>
                         <constraints>
-                            <constraint firstItem="W98-6N-Cuw" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="5eg-Ux-bGm"/>
-                            <constraint firstItem="W98-6N-Cuw" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" id="R1e-Ku-OyO"/>
-                            <constraint firstAttribute="centerY" secondItem="TyV-c9-G0C" secondAttribute="centerY" id="Rxv-Yd-F43"/>
-                            <constraint firstAttribute="centerX" secondItem="TyV-c9-G0C" secondAttribute="centerX" id="Zn4-Y4-lbg"/>
-                            <constraint firstAttribute="trailing" secondItem="W98-6N-Cuw" secondAttribute="trailing" id="lPy-TH-BBu"/>
-                            <constraint firstAttribute="bottom" secondItem="W98-6N-Cuw" secondAttribute="bottom" id="rhT-Kc-xtz"/>
+                            <constraint firstAttribute="trailing" secondItem="W98-6N-Cuw" secondAttribute="trailing" id="6qB-SI-gtC"/>
+                            <constraint firstAttribute="bottom" secondItem="W98-6N-Cuw" secondAttribute="bottom" id="CRj-bQ-1LL"/>
+                            <constraint firstItem="W98-6N-Cuw" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="aTf-4S-pCn"/>
+                            <constraint firstItem="W98-6N-Cuw" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="47" id="xVU-I6-4ay"/>
                         </constraints>
                         <animations/>
                     </view>
+                    <connections>
+                        <outlet property="editor" destination="wst-9R-GU0" id="Ez7-S6-yu4"/>
+                    </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="655"/>
+            <point key="canvasLocation" x="80" y="904.5"/>
         </scene>
     </scenes>
 </document>

@@ -7,52 +7,87 @@
 //
 
 import Cocoa
+import Quartz
+
+protocol SimplerTextViewDelegate {
+    func simplerTextViewKeyUp(character:String)
+    func simplerTextViewGotComplexWord()
+}
 
 class SimplerTextView: NSTextView {
     var simpleWords = SimpleWords()
+    var simplerDelegate:SimplerTextViewDelegate!
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         font = NSFont(name: "Avenir Next", size: 23)
-        backgroundColor = NSColor(red:0.090, green:0.149, blue:0.220, alpha:1)
-        textColor = NSColor(red:1, green:1, blue:1, alpha:1)
-        insertionPointColor = NSColor(red:1, green:1, blue:1, alpha:1)
+        backgroundColor = C.editorBackgroundColor
+        textColor = C.editorTextColor
+//        insertionPointColor = NSColor(red:1, green:1, blue:1, alpha:1)
+        wantsLayer = true
+        frame.origin.x += 1000
+        
     }
-    
-
     
     override func keyUp(theEvent: NSEvent) {
-        theEvent.keyCode
-        if theEvent.characters == " " {
-            checkLastWord()
+        if theEvent.characters == " "
+            || theEvent.characters == ","
+            || theEvent.characters == "."
+            || theEvent.characters == "?"
+            || theEvent.characters == ";"
+        {
+            checkDocument(theEvent.characters!)
         }
-    }
-    
-    func checkLastWord(){
-        let storage = textStorage?.string
-        let words = storage!.characters.split{$0 == " "}.map(String.init)
-        if let lastWord = words.last {
-            checkWord(lastWord)
+        
+        if theEvent.characters != nil {
+            simplerDelegate.simplerTextViewKeyUp(theEvent.characters!)
             }
     }
     
-    func checkWord(word:String){
+    func checkDocument(trigger:String){
+        let storage = textStorage?.string
+        let words = storage!.characters.split{$0 == " "}.map(String.init)
+        if let word = words.last {
+            checkWord(word, trigger: trigger)
+        }
+    }
+    
+    func checkWord(word:String, trigger:String){
         var w = word.stringByReplacingOccurrencesOfString(".", withString: "")
         w = w.stringByReplacingOccurrencesOfString(",", withString: "")
+        w = w.stringByReplacingOccurrencesOfString("?", withString: "")
+        w = w.stringByReplacingOccurrencesOfString(";", withString: "")
+        w = w.stringByReplacingOccurrencesOfString("\n", withString: "")
         
         if simpleWords.simpleWord(w){
             Swift.print("\(w) is simple")
         } else {
             Swift.print("\(w) is complex, deeeye")
-            string = textStorage?.string.stringByReplacingOccurrencesOfString(" \(w)", withString: "")
+            // get current selection
+            
+            
+            // do UI stuff in the viewcontroller
+            simplerDelegate.simplerTextViewGotComplexWord()
+            
+            // remove the shit
+            
+            if NSUserDefaults.standardUserDefaults().boolForKey(C.PREF_REMOVEIMMEDIATELY) {
+                self.string = NSString(string: self.string!).stringByReplacingOccurrencesOfString("\(w)\(trigger)", withString:"")
+                }
+            
+            // set current selection
+            
         }
     }
     
     
     
+    func shake(){        
+        simplerDelegate.simplerTextViewGotComplexWord()
+    }
+    
     override func drawRect(dirtyRect: NSRect) {
         super.drawRect(dirtyRect)
-        
         // Drawing code here.
     }
 }

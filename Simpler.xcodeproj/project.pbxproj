@@ -15,6 +15,7 @@
 		C86C6F501C01AAE600A21B0A /* SimplerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C6F4F1C01AAE600A21B0A /* SimplerTextView.swift */; };
 		C86C6F521C01AF7E00A21B0A /* SimpleWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C6F511C01AF7E00A21B0A /* SimpleWords.swift */; };
 		C86C6F541C01AFA700A21B0A /* simplewords.txt in Resources */ = {isa = PBXBuildFile; fileRef = C86C6F531C01AFA700A21B0A /* simplewords.txt */; };
+		C8B24E371C030F4200FF0FDA /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B24E361C030F4200FF0FDA /* C.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		C86C6F4F1C01AAE600A21B0A /* SimplerTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplerTextView.swift; sourceTree = "<group>"; };
 		C86C6F511C01AF7E00A21B0A /* SimpleWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleWords.swift; sourceTree = "<group>"; };
 		C86C6F531C01AFA700A21B0A /* simplewords.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = simplewords.txt; sourceTree = "<group>"; };
+		C8B24E361C030F4200FF0FDA /* C.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = C.swift; path = Simpler/C.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +46,7 @@
 		C86C6F321C01A5EF00A21B0A = {
 			isa = PBXGroup;
 			children = (
+				C8B24E361C030F4200FF0FDA /* C.swift */,
 				C86C6F3D1C01A5EF00A21B0A /* Simpler */,
 				C86C6F3C1C01A5EF00A21B0A /* Products */,
 			);
@@ -147,6 +150,7 @@
 				C86C6F501C01AAE600A21B0A /* SimplerTextView.swift in Sources */,
 				C86C6F411C01A5EF00A21B0A /* ViewController.swift in Sources */,
 				C86C6F3F1C01A5EF00A21B0A /* AppDelegate.swift in Sources */,
+				C8B24E371C030F4200FF0FDA /* C.swift in Sources */,
 				C86C6F521C01AF7E00A21B0A /* SimpleWords.swift in Sources */,
 				C86C6F431C01A5EF00A21B0A /* Document.swift in Sources */,
 			);
@@ -289,6 +293,7 @@
 				C86C6F4E1C01A5EF00A21B0A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
