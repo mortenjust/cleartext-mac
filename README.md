@@ -1,7 +1,7 @@
 # Cleartext for Mac
-A text editor that only allows the top 1000 most common words in English
+A text editor that only allows the 1,000 most common words in English
 
-I just received Randall Monroe's new book Thing Explainer. The idea is to explain complex things like data centers and space stations using only the 1,000 most common words in English. This editor makes your text just as charmingly clear. 
+I just got Randall Monroe's new book <a href="https://xkcd.com/thing-explainer/">Thing Explainer</a>. Only using the top 1,000 words makes the text really easy to read. I thought I would make it easy for people to write like this, so I made this application. 
 
 <img src="https://raw.githubusercontent.com/mortenjust/cleartext-mac/master/UX/cleartext.gif">
 
