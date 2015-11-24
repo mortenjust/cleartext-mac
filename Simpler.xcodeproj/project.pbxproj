@@ -19,7 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		C86C6F3B1C01A5EF00A21B0A /* Simpler.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Simpler.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C86C6F3B1C01A5EF00A21B0A /* Cleartext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cleartext.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86C6F3E1C01A5EF00A21B0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C86C6F401C01A5EF00A21B0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C86C6F421C01A5EF00A21B0A /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
@@ -55,7 +55,7 @@
 		C86C6F3C1C01A5EF00A21B0A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				C86C6F3B1C01A5EF00A21B0A /* Simpler.app */,
+				C86C6F3B1C01A5EF00A21B0A /* Cleartext.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -79,9 +79,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		C86C6F3A1C01A5EF00A21B0A /* Simpler */ = {
+		C86C6F3A1C01A5EF00A21B0A /* Cleartext */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = C86C6F4C1C01A5EF00A21B0A /* Build configuration list for PBXNativeTarget "Simpler" */;
+			buildConfigurationList = C86C6F4C1C01A5EF00A21B0A /* Build configuration list for PBXNativeTarget "Cleartext" */;
 			buildPhases = (
 				C86C6F371C01A5EF00A21B0A /* Sources */,
 				C86C6F381C01A5EF00A21B0A /* Frameworks */,
@@ -91,9 +91,9 @@
 			);
 			dependencies = (
 			);
-			name = Simpler;
+			name = Cleartext;
 			productName = Simpler;
-			productReference = C86C6F3B1C01A5EF00A21B0A /* Simpler.app */;
+			productReference = C86C6F3B1C01A5EF00A21B0A /* Cleartext.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -124,7 +124,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				C86C6F3A1C01A5EF00A21B0A /* Simpler */,
+				C86C6F3A1C01A5EF00A21B0A /* Cleartext */,
 			);
 		};
 /* End PBXProject section */
@@ -286,7 +286,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		C86C6F4C1C01A5EF00A21B0A /* Build configuration list for PBXNativeTarget "Simpler" */ = {
+		C86C6F4C1C01A5EF00A21B0A /* Build configuration list for PBXNativeTarget "Cleartext" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				C86C6F4D1C01A5EF00A21B0A /* Debug */,

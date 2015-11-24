@@ -15,8 +15,8 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "C86C6F3A1C01A5EF00A21B0A"
-               BuildableName = "Simpler.app"
-               BlueprintName = "Simpler"
+               BuildableName = "Cleartext.app"
+               BlueprintName = "Cleartext"
                ReferencedContainer = "container:Simpler.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -33,8 +33,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C86C6F3A1C01A5EF00A21B0A"
-            BuildableName = "Simpler.app"
-            BlueprintName = "Simpler"
+            BuildableName = "Cleartext.app"
+            BlueprintName = "Cleartext"
             ReferencedContainer = "container:Simpler.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -56,8 +56,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C86C6F3A1C01A5EF00A21B0A"
-            BuildableName = "Simpler.app"
-            BlueprintName = "Simpler"
+            BuildableName = "Cleartext.app"
+            BlueprintName = "Cleartext"
             ReferencedContainer = "container:Simpler.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
@@ -75,8 +75,8 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "C86C6F3A1C01A5EF00A21B0A"
-            BuildableName = "Simpler.app"
-            BlueprintName = "Simpler"
+            BuildableName = "Cleartext.app"
+            BlueprintName = "Cleartext"
             ReferencedContainer = "container:Simpler.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
