@@ -1,6 +1,6 @@
 # Cleartext for Mac 
 
-<a href="https://github.com/mortenjust/cleartext-mac/releases">Download for Mac 10.11+</a>
+### <a href="https://github.com/mortenjust/cleartext-mac/releases">Download for Mac 10.11+</a>
 
 A text editor that only allows the 1,000 most common words in English
 
