@@ -1,4 +1,7 @@
-# Cleartext for Mac
+# Cleartext for Mac 
+
+<a href="https://github.com/mortenjust/cleartext-mac/releases">Download for Mac 10.11+</a>
+
 A text editor that only allows the 1,000 most common words in English
 
 I just got Randall Monroe's new book <a href="https://xkcd.com/thing-explainer/">Thing Explainer</a>. Only using the top 1,000 words makes the text really easy to read. I thought I would make it easy for people to write like this, so I made this application. 
