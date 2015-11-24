@@ -10,3 +10,4 @@ I just got Randall Monroe's new book <a href="https://xkcd.com/thing-explainer/"
 * <a href="https://github.com/first20hours/google-10000-english">Google top 10,000 words</a>
 * <a href="https://xkcd.com/thing-explainer/">Randall Monroe: Thing Explainer</a>
 * <a href="http://www.newyorker.com/tech/elements/the-space-doctors-big-idea-einstein-general-relativity">The Space Doctor's Big Idea</a>
+* <a href="https://www.youtube.com/watch?v=Ac7G7xOG2Ag">Turbo Encabulator</>
