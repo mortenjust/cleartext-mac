@@ -1,4 +1,4 @@
-# Cleartext for Mac 
+# Cleartext
 
 ### <a href="https://github.com/mortenjust/cleartext-mac/releases">Download for Mac 10.11+</a>
 
