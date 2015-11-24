@@ -5,6 +5,8 @@ I just got Randall Monroe's new book <a href="https://xkcd.com/thing-explainer/"
 
 <img src="https://raw.githubusercontent.com/mortenjust/cleartext-mac/master/UX/cleartext.gif">
 
+<iframe width="420" height="315" src="https://www.youtube.com/embed/Ac7G7xOG2Ag" frameborder="0" allowfullscreen></iframe>
+
 * <a href="https://github.com/first20hours/google-10000-english">Google top 10,000 words</a>
 * <a href="https://xkcd.com/thing-explainer/">Randall Monroe: Thing Explainer</a>
 * <a href="http://www.newyorker.com/tech/elements/the-space-doctors-big-idea-einstein-general-relativity">The Space Doctor's Big Idea</a>
