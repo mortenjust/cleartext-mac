@@ -338,10 +338,17 @@
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="Bad words" id="Otg-Yy-uco">
+                            <menuItem title="Words" id="Otg-Yy-uco">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Bad words" id="VqR-mX-kEr">
+                                <menu key="submenu" title="Words" id="VqR-mX-kEr">
                                     <items>
+                                        <menuItem title="Language" id="tWE-i4-IRS">
+                                            <modifierMask key="keyEquivalentModifierMask"/>
+                                            <menu key="submenu" title="Language" id="GKk-cv-b84"/>
+                                            <connections>
+                                                <action selector="languageClicked:" target="Voe-Tx-rLC" id="hnW-GX-bC3"/>
+                                            </connections>
+                                        </menuItem>
                                         <menuItem title="Make sound" state="on" id="dRo-Wd-GNh">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
@@ -661,7 +668,11 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Simpler" customModuleProvider="target"/>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Cleartext" customModuleProvider="target">
+                    <connections>
+                        <outlet property="languageMenu" destination="tWE-i4-IRS" id="AJF-M6-0Nc"/>
+                    </connections>
+                </customObject>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="y4Y-3J-iBV"/>
             </objects>
@@ -688,7 +699,7 @@
         <!--View Controller-->
         <scene sceneID="hIz-AP-VOD">
             <objects>
-                <viewController id="5gI-5U-AMq" customClass="ViewController" customModule="Simpler" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="5gI-5U-AMq" customClass="ViewController" customModule="Cleartext" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ERx-hH-rdd">
                         <rect key="frame" x="0.0" y="0.0" width="480" height="485"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -699,7 +710,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="480" height="438"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="wst-9R-GU0" customClass="SimplerTextView" customModule="Simpler" customModuleProvider="target">
+                                        <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="wst-9R-GU0" customClass="SimplerTextView" customModule="Cleartext" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="480" height="438"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <animations/>
@@ -733,10 +744,31 @@
                                     <userDefinedRuntimeAttribute type="boolean" keyPath="wantsLayer" value="YES"/>
                                 </userDefinedRuntimeAttributes>
                             </scrollView>
+                            <popUpButton translatesAutoresizingMaskIntoConstraints="NO" id="fJE-h3-xGc" customClass="LanguagePopupButton" customModule="Cleartext" customModuleProvider="target">
+                                <rect key="frame" x="428" y="10" width="52" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="AJk-M3-bDl"/>
+                                    <constraint firstAttribute="width" constant="52" id="jDy-1F-a9t"/>
+                                </constraints>
+                                <animations/>
+                                <popUpButtonCell key="cell" type="bevel" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" arrowPosition="noArrow" preferredEdge="maxY" id="bxw-s5-ry5">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="hyF-BQ-dSj"/>
+                                    <connections>
+                                        <binding destination="PjD-nM-8CT" name="selectedIndex" keyPath="values.selectedLanguage" id="IL9-Va-KWQ"/>
+                                    </connections>
+                                </popUpButtonCell>
+                                <connections>
+                                    <action selector="changeLanguage:" target="5gI-5U-AMq" id="lug-o3-ECo"/>
+                                </connections>
+                            </popUpButton>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="W98-6N-Cuw" secondAttribute="trailing" id="6qB-SI-gtC"/>
+                            <constraint firstAttribute="bottom" secondItem="fJE-h3-xGc" secondAttribute="bottom" constant="10" id="CGh-8p-reP"/>
                             <constraint firstAttribute="bottom" secondItem="W98-6N-Cuw" secondAttribute="bottom" id="CRj-bQ-1LL"/>
+                            <constraint firstAttribute="trailing" secondItem="fJE-h3-xGc" secondAttribute="trailing" id="PNW-TX-fQp"/>
                             <constraint firstItem="W98-6N-Cuw" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="aTf-4S-pCn"/>
                             <constraint firstItem="W98-6N-Cuw" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="47" id="xVU-I6-4ay"/>
                         </constraints>
@@ -744,9 +776,11 @@
                     </view>
                     <connections>
                         <outlet property="editor" destination="wst-9R-GU0" id="Ez7-S6-yu4"/>
+                        <outlet property="languagePicker" destination="fJE-h3-xGc" id="LBQ-qq-f8j"/>
                     </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <userDefaultsController id="PjD-nM-8CT"/>
             </objects>
             <point key="canvasLocation" x="80" y="904.5"/>
         </scene>

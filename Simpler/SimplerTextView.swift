@@ -59,18 +59,14 @@ class SimplerTextView: NSTextView {
         w = w.stringByReplacingOccurrencesOfString(";", withString: "")
         w = w.stringByReplacingOccurrencesOfString("\n", withString: "")
         
-        if simpleWords.simpleWord(w){
+        if simpleWords.isSimpleWord(w){
             Swift.print("\(w) is simple")
         } else {
-            Swift.print("\(w) is complex, deeeye")
-            // get current selection
-            
-            
+            Swift.print("\(w) is complex")
             // do UI stuff in the viewcontroller
             simplerDelegate.simplerTextViewGotComplexWord()
             
             // remove the shit
-            
             if NSUserDefaults.standardUserDefaults().boolForKey(C.PREF_REMOVEIMMEDIATELY) {
                 self.string = NSString(string: self.string!).stringByReplacingOccurrencesOfString("\(w)\(trigger)", withString:"")
                 }

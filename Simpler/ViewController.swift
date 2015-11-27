@@ -10,6 +10,7 @@ import Cocoa
 
 class ViewController: NSViewController, SimplerTextViewDelegate {
 
+    @IBOutlet weak var languagePicker: NSPopUpButton!
     
     @IBOutlet var editor: SimplerTextView!
     var document:Document!
@@ -24,9 +25,7 @@ class ViewController: NSViewController, SimplerTextViewDelegate {
         win.styleMask = win.styleMask | NSFullSizeContentViewWindowMask;
         win.title = ""
         win.backgroundColor = C.editorBackgroundColor
-        
         editor.string = document.contents as String
-        
     }
     
     
@@ -34,6 +33,12 @@ class ViewController: NSViewController, SimplerTextViewDelegate {
         super.viewDidLoad()
         editor.simplerDelegate = self
     }
+    
+    @IBAction func changeLanguage(sender: LanguagePopupButton) {
+        print("new language is, and loading from prefs "+(sender.selectedItem?.title)!)
+        editor.simpleWords.loadDictionaryFromPrefs()
+    }
+    
     
     func makeBadSound(){
         if NSUserDefaults.standardUserDefaults().boolForKey(C.PREF_MAKESOUND) {

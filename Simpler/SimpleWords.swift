@@ -1,4 +1,4 @@
-//
+ //
 //  SimpleWords.swift
 //  Simpler
 //
@@ -13,11 +13,22 @@ class SimpleWords: NSObject {
     
     func getArray(){
         if allWords.count < 1 {
-            readAllWords()
+         loadDictionaryFromPrefs()
         }
     }
     
-    func simpleWord(word:String) -> Bool {
+    func loadDictionaryFromPrefs(){
+        if let languageCode = NSUserDefaults.standardUserDefaults().stringForKey("editorLanguage") {
+            readWordsForLanguage(languageCode)
+        }
+
+    }
+    
+    func getFilenameForLanguageCode(languageCode:String) -> String {
+        return "\(languageCode).txt" // if we decide to show a more human readable name, this func will be the place
+    }
+    
+    func isSimpleWord(word:String) -> Bool {
         getArray()
         if allWords.contains(word.lowercaseString) {
             return true
@@ -25,8 +36,10 @@ class SimpleWords: NSObject {
         return false
     }
     
-    func readAllWords(){
-        let path = NSBundle.mainBundle().pathForResource("simplewords", ofType: "txt")!
+    func readWordsForLanguage(languageCode:String = "en"){
+        let fileName = getFilenameForLanguageCode(languageCode)
+        
+        let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "")!
         do {
             let text = try NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding)
             self.allWords = text.componentsSeparatedByString("\n")
