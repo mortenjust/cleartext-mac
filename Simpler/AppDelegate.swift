@@ -24,7 +24,8 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         
         let ud = NSUserDefaults.standardUserDefaults()
         ud.registerDefaults(C.defaultPrefValues)
-  
+        
+        if ud.stringForKey("language") == "" { ud.setValue("en", forKey: "language") }
     }
     
     

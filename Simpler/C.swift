@@ -24,7 +24,7 @@ class C: NSObject {
     static let defaultPrefValues = [
         "makeSound":true,
         "removeImmediately":true,
-        "editorLanguage":"en"
+        "language":"en"
     ]
 
     static let languages = [

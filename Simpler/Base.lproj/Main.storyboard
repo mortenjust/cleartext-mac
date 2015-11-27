@@ -704,9 +704,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="485"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="light" translatesAutoresizingMaskIntoConstraints="NO" id="W98-6N-Cuw">
+                            <scrollView canDrawConcurrently="YES" focusRingType="none" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="light" translatesAutoresizingMaskIntoConstraints="NO" id="W98-6N-Cuw">
                                 <rect key="frame" x="0.0" y="0.0" width="480" height="438"/>
-                                <clipView key="contentView" id="wOx-7P-XnO">
+                                <clipView key="contentView" canDrawConcurrently="YES" id="wOx-7P-XnO">
                                     <rect key="frame" x="0.0" y="0.0" width="480" height="438"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
@@ -756,7 +756,7 @@
                                     <font key="font" metaFont="menu"/>
                                     <menu key="menu" id="hyF-BQ-dSj"/>
                                     <connections>
-                                        <binding destination="PjD-nM-8CT" name="selectedIndex" keyPath="values.selectedLanguage" id="IL9-Va-KWQ"/>
+                                        <binding destination="PjD-nM-8CT" name="selectedValue" keyPath="values.language" id="BCb-I9-ZKZ"/>
                                     </connections>
                                 </popUpButtonCell>
                                 <connections>

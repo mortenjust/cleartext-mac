@@ -27,6 +27,7 @@ class SimplerTextView: NSTextView {
         wantsLayer = true
         frame.origin.x += 1000
         
+        simpleWords.loadDictionaryFromPrefs()
     }
     
     override func keyUp(theEvent: NSEvent) {
@@ -60,10 +61,9 @@ class SimplerTextView: NSTextView {
         w = w.stringByReplacingOccurrencesOfString("\n", withString: "")
         
         if simpleWords.isSimpleWord(w){
-            Swift.print("\(w) is simple")
+            // let it live!
         } else {
-            Swift.print("\(w) is complex")
-            // do UI stuff in the viewcontroller
+            // kill it!
             simplerDelegate.simplerTextViewGotComplexWord()
             
             // remove the shit

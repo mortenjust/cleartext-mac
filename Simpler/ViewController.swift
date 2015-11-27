@@ -36,7 +36,7 @@ class ViewController: NSViewController, SimplerTextViewDelegate {
     
     @IBAction func changeLanguage(sender: LanguagePopupButton) {
         print("new language is, and loading from prefs "+(sender.selectedItem?.title)!)
-        editor.simpleWords.loadDictionaryFromPrefs()
+        editor.simpleWords.loadDictionaryForCode((sender.selectedItem?.title)!)
     }
     
     

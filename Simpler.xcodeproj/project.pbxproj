@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		C84079D71C06F153002EC6D4 /* da.txt in Resources */ = {isa = PBXBuildFile; fileRef = C84079D61C06F153002EC6D4 /* da.txt */; };
 		C84079DA1C07E422002EC6D4 /* LanguagePopupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84079D91C07E422002EC6D4 /* LanguagePopupButton.swift */; };
+		C84079DC1C07FABE002EC6D4 /* xkcd.txt in Resources */ = {isa = PBXBuildFile; fileRef = C84079DB1C07FABE002EC6D4 /* xkcd.txt */; };
 		C86C6F3F1C01A5EF00A21B0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C6F3E1C01A5EF00A21B0A /* AppDelegate.swift */; };
 		C86C6F411C01A5EF00A21B0A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C6F401C01A5EF00A21B0A /* ViewController.swift */; };
 		C86C6F431C01A5EF00A21B0A /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C6F421C01A5EF00A21B0A /* Document.swift */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		C84079D61C06F153002EC6D4 /* da.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = da.txt; sourceTree = "<group>"; };
 		C84079D91C07E422002EC6D4 /* LanguagePopupButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LanguagePopupButton.swift; path = Simpler/LanguagePopupButton.swift; sourceTree = "<group>"; };
+		C84079DB1C07FABE002EC6D4 /* xkcd.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = xkcd.txt; sourceTree = "<group>"; };
 		C86C6F3B1C01A5EF00A21B0A /* Cleartext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cleartext.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86C6F3E1C01A5EF00A21B0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C86C6F401C01A5EF00A21B0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -50,6 +52,7 @@
 		C84079D81C0786FA002EC6D4 /* dictionaries */ = {
 			isa = PBXGroup;
 			children = (
+				C84079DB1C07FABE002EC6D4 /* xkcd.txt */,
 				C86C6F531C01AFA700A21B0A /* en.txt */,
 				C84079D61C06F153002EC6D4 /* da.txt */,
 			);
@@ -152,6 +155,7 @@
 				C86C6F541C01AFA700A21B0A /* en.txt in Resources */,
 				C86C6F481C01A5EF00A21B0A /* Main.storyboard in Resources */,
 				C84079D71C06F153002EC6D4 /* da.txt in Resources */,
+				C84079DC1C07FABE002EC6D4 /* xkcd.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
