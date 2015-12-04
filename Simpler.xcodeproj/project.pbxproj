@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B85A9B31C11B6AE000EC95B /* nl.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5B85A9B21C11B6AE000EC95B /* nl.txt */; };
 		C84079D71C06F153002EC6D4 /* da.txt in Resources */ = {isa = PBXBuildFile; fileRef = C84079D61C06F153002EC6D4 /* da.txt */; };
 		C84079DA1C07E422002EC6D4 /* LanguagePopupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84079D91C07E422002EC6D4 /* LanguagePopupButton.swift */; };
 		C84079DC1C07FABE002EC6D4 /* xkcd.txt in Resources */ = {isa = PBXBuildFile; fileRef = C84079DB1C07FABE002EC6D4 /* xkcd.txt */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B85A9B21C11B6AE000EC95B /* nl.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nl.txt; sourceTree = "<group>"; };
 		C84079D61C06F153002EC6D4 /* da.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = da.txt; sourceTree = "<group>"; };
 		C84079D91C07E422002EC6D4 /* LanguagePopupButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LanguagePopupButton.swift; path = Simpler/LanguagePopupButton.swift; sourceTree = "<group>"; };
 		C84079DB1C07FABE002EC6D4 /* xkcd.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = xkcd.txt; sourceTree = "<group>"; };
@@ -52,6 +54,7 @@
 		C84079D81C0786FA002EC6D4 /* dictionaries */ = {
 			isa = PBXGroup;
 			children = (
+				5B85A9B21C11B6AE000EC95B /* nl.txt */,
 				C84079DB1C07FABE002EC6D4 /* xkcd.txt */,
 				C86C6F531C01AFA700A21B0A /* en.txt */,
 				C84079D61C06F153002EC6D4 /* da.txt */,
@@ -153,6 +156,7 @@
 			files = (
 				C86C6F451C01A5EF00A21B0A /* Assets.xcassets in Resources */,
 				C86C6F541C01AFA700A21B0A /* en.txt in Resources */,
+				5B85A9B31C11B6AE000EC95B /* nl.txt in Resources */,
 				C86C6F481C01A5EF00A21B0A /* Main.storyboard in Resources */,
 				C84079D71C06F153002EC6D4 /* da.txt in Resources */,
 				C84079DC1C07FABE002EC6D4 /* xkcd.txt in Resources */,
