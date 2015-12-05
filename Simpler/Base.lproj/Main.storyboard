@@ -701,48 +701,41 @@
             <objects>
                 <viewController id="5gI-5U-AMq" customClass="ViewController" customModule="Cleartext" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="ERx-hH-rdd">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="485"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="500"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView canDrawConcurrently="YES" focusRingType="none" borderType="none" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" hasHorizontalScroller="NO" hasVerticalScroller="NO" usesPredominantAxisScrolling="NO" scrollerKnobStyle="light" translatesAutoresizingMaskIntoConstraints="NO" id="W98-6N-Cuw">
-                                <rect key="frame" x="0.0" y="0.0" width="480" height="438"/>
+                            <scrollView canDrawConcurrently="YES" focusRingType="none" borderType="none" autohidesScrollers="YES" horizontalLineScroll="0.0" horizontalPageScroll="0.0" verticalLineScroll="0.0" verticalPageScroll="0.0" hasHorizontalScroller="NO" maxMagnification="1" minMagnification="1" findBarPosition="aboveHorizontalRuler" translatesAutoresizingMaskIntoConstraints="NO" id="W98-6N-Cuw">
+                                <rect key="frame" x="10" y="31" width="460" height="422"/>
                                 <clipView key="contentView" canDrawConcurrently="YES" id="wOx-7P-XnO">
-                                    <rect key="frame" x="0.0" y="0.0" width="480" height="438"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="460" height="422"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView importsGraphics="NO" findStyle="panel" continuousSpellChecking="YES" allowsUndo="YES" usesRuler="YES" usesFontPanel="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="wst-9R-GU0" customClass="SimplerTextView" customModule="Cleartext" customModuleProvider="target">
-                                            <rect key="frame" x="0.0" y="0.0" width="480" height="438"/>
+                                        <textView autoresizesSubviews="NO" importsGraphics="NO" horizontallyResizable="YES" selectionGranularity="word" findStyle="panel" continuousSpellChecking="YES" allowsDocumentBackgroundColorChange="YES" allowsUndo="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="wst-9R-GU0" customClass="SimplerTextView" customModule="Cleartext" customModuleProvider="target">
+                                            <rect key="frame" x="0.0" y="0.0" width="460" height="422"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                            <size key="minSize" width="480" height="438"/>
-                                            <size key="maxSize" width="499" height="10000000"/>
+                                            <size key="minSize" width="460" height="422"/>
+                                            <size key="maxSize" width="460" height="10000000"/>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
-                                            <size key="minSize" width="480" height="438"/>
-                                            <size key="maxSize" width="499" height="10000000"/>
+                                            <size key="minSize" width="460" height="422"/>
+                                            <size key="maxSize" width="460" height="10000000"/>
                                         </textView>
                                     </subviews>
                                     <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    <userDefinedRuntimeAttributes>
-                                        <userDefinedRuntimeAttribute type="boolean" keyPath="wantsLayer" value="YES"/>
-                                    </userDefinedRuntimeAttributes>
                                 </clipView>
                                 <animations/>
-                                <edgeInsets key="contentInsets" left="20" right="20" top="20" bottom="20"/>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="o2P-e6-ldJ">
                                     <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="PKT-cy-04P">
-                                    <rect key="frame" x="-100" y="-100" width="15" height="445"/>
+                                    <rect key="frame" x="444" y="0.0" width="16" height="422"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <animations/>
                                 </scroller>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="boolean" keyPath="wantsLayer" value="YES"/>
-                                </userDefinedRuntimeAttributes>
                             </scrollView>
                             <popUpButton translatesAutoresizingMaskIntoConstraints="NO" id="fJE-h3-xGc" customClass="LanguagePopupButton" customModule="Cleartext" customModuleProvider="target">
                                 <rect key="frame" x="428" y="10" width="52" height="21"/>
@@ -765,11 +758,11 @@
                             </popUpButton>
                         </subviews>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="W98-6N-Cuw" secondAttribute="trailing" id="6qB-SI-gtC"/>
+                            <constraint firstAttribute="trailing" secondItem="W98-6N-Cuw" secondAttribute="trailing" constant="10" id="6qB-SI-gtC"/>
                             <constraint firstAttribute="bottom" secondItem="fJE-h3-xGc" secondAttribute="bottom" constant="10" id="CGh-8p-reP"/>
-                            <constraint firstAttribute="bottom" secondItem="W98-6N-Cuw" secondAttribute="bottom" id="CRj-bQ-1LL"/>
+                            <constraint firstAttribute="bottom" secondItem="W98-6N-Cuw" secondAttribute="bottom" constant="31" id="CRj-bQ-1LL"/>
                             <constraint firstAttribute="trailing" secondItem="fJE-h3-xGc" secondAttribute="trailing" id="PNW-TX-fQp"/>
-                            <constraint firstItem="W98-6N-Cuw" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" id="aTf-4S-pCn"/>
+                            <constraint firstItem="W98-6N-Cuw" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="10" id="aTf-4S-pCn"/>
                             <constraint firstItem="W98-6N-Cuw" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="47" id="xVU-I6-4ay"/>
                         </constraints>
                         <animations/>
@@ -784,7 +777,7 @@
                 <userDefaultsController id="KhH-0C-hjA"/>
                 <userDefaultsController id="nk0-BI-RDD" customClass="Document"/>
             </objects>
-            <point key="canvasLocation" x="80" y="904.5"/>
+            <point key="canvasLocation" x="80" y="904"/>
         </scene>
     </scenes>
 </document>

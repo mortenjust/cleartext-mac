@@ -29,9 +29,15 @@ class SimplerTextView: NSTextView, SimplerTextStorageDelegate {
         
         layoutManager?.replaceTextStorage(simplerStorage)
         wantsLayer = true
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "selectionDidChange:", name: NSTextViewDidChangeSelectionNotification, object: nil)
+
     }
     
-    
+    func selectionDidChange(n:NSNotification){
+        simplerStorage.selectionDidChange(self.selectedRange())
+
+    }
     
     func simplerTextStorageGotComplexWordAtRange(range:NSRange) {
         Swift.print("setting range to \(range)")

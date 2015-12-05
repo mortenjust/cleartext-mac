@@ -18,6 +18,7 @@ class SimplerTextStorage: NSTextStorage {
     let checker = SimpleWords()
     var simpleDelegate : SimplerTextStorageDelegate?
     var layoutManager : NSLayoutManager!
+    var currentWord : (word:String, range:NSRange)!
     
     override var string: String {
         return backingStore.string
@@ -25,7 +26,6 @@ class SimplerTextStorage: NSTextStorage {
 
     override init() {
         super.init()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "selectionDidChange:", name: NSTextViewDidChangeSelectionNotification, object: nil)
     }
 
     required init?(coder aDecoder: NSCoder) {
@@ -40,101 +40,92 @@ class SimplerTextStorage: NSTextStorage {
         return backingStore.attributesAtIndex(location, effectiveRange: range)
     }
     
-    func selectionDidChange(n:NSNotification){
-        if(self.editedRange.length==0){
-        lookForBadWords(NSMakeRange(0, backingStore.string.characters.count))
+    func selectionDidChange(range:NSRange){
+
+        
+        if editedRange.length > 0 && editedRange.location < backingStore.string.characters.count  {
+            
+            
+            let token = tokenAtIndex(editedRange.location, inString: backingStore.string)
+            let word = NSString(string: backingStore.string).substringWithRange(token.range)
+            
+            print("\(token.range), \(word), is a: \(token.token)")
+            if token.token == NSLinguisticTagWhitespace || token.token == NSLinguisticTagPunctuation {
+                if currentWord != nil {
+                    performReplacementsForRange(token.range)
+                    }
+                } else {
+                    currentWord = (word: word, token.range) // build it!
+                }
+            
+
             }
-        else {
-        }
+        
+
     }
     
     override func processEditing() {
-                super.processEditing()
-        print("edited range \(self.editedRange)")
-        if self.editedRange.length == 1 {
-            let addedChar = NSString(string: backingStore.string).substringWithRange(self.editedRange)
-            if addedChar == " " {
-                performReplacementsForRange(self.editedRange)
-                }
-            }
+        super.processEditing()
+
+//        if self.editedRange.length == 1 {
+//            let addedChar = NSString(string: backingStore.string).substringWithRange(self.editedRange)
+//            if addedChar == " " {
+//                performReplacementsForRange(self.editedRange)
+//                }
+//            }
+        
+
+
     }
     
     func performReplacementsForRange(changedRange: NSRange) {
-        var extendedRange = NSUnionRange(changedRange, NSString(string: backingStore.string).lineRangeForRange(NSMakeRange(changedRange.location, 0)))
-            extendedRange = NSUnionRange(changedRange, NSString(string: backingStore.string).lineRangeForRange(NSMakeRange(NSMaxRange(changedRange), 0)))
 
+        let index = changedRange.location-1
+        print("performreplacements: \(changedRange)")
         
-        
-        
-//        let substring = NSString(string: backingStore.string).substringWithRange(extendedRange)
-//        print("range to test: \(extendedRange) which is \(substring)")
-
-        
-        lookForBadWords(extendedRange)
+        if let wordRange = wordRangeAtIndex(index, inString: backingStore.string) {
+            lookForBadWords(wordRange)
+            }
     }
     
     func substringForRange(range:NSRange) -> String {
         return String(NSString(string: self.backingStore.string).substringWithRange(range))
     }
     
-
     
     func lookForBadWords(range:NSRange){
-        print("Looking for bad words in \(substringForRange(range))")
-        // \b for word boundaries, \W for any non-word character so we don't end up evaluating while typing
-        // TODO: Don't match names like: Hello, Abraham. For now writers will use 1 char names, like: Hello, A
-//        let regexStr = "(\\w+)"
-        let regexStr = "\\b(\\w+)\\W"
+        print("Looking for bad words in ::\(substringForRange(range))::")
+        let word = NSString(string: backingStore.string).substringWithRange(range)
+        if word.characters.count == 0 { return }
+
         
-        let regex = try! NSRegularExpression(pattern: regexStr, options: .CaseInsensitive)
-        regex.enumerateMatchesInString(backingStore.string, options: .ReportCompletion, range: range) { (result, flags, point) -> Void in
-            
-            let matchRangeTest = result?.rangeAtIndex(1)
-            if let matchRange = matchRangeTest {
-                let word = NSString(string: self.backingStore.string).substringWithRange(matchRange)
-                if !self.checker.isSimpleWord(word) {
-                    print("BAD word")
-                    self.processBadWord(word, atRange: matchRange)
-                    }
-                else {
-                    self.processGoodWord(word, atRange: matchRange)
-                }
-                }
+        let timer = ParkBenchTimer()
+
+        if self.checker.isSimpleWord(word) {
+            processGoodWord(word, atRange: range)
+        } else {
+            processBadWord(word, atRange: range)
         }
+        
+        if timer.stop() > 0.001 { Swift.print("########### took  \(timer.stop())") }
     }
     
-    
-    func processGoodWord(word:String, atRange passedRange:NSRange){
-        var range = passedRange
-        var attsAt = attributesAtIndex(range.location, longestEffectiveRange: nil, inRange: range)
-        attsAt[NSBackgroundColorAttributeName] = C.editorBackgroundColor
-        
-        if backingStore.length > (range.location+1) {
-            range.length++
-        }
-        
-        beginEditing()
-        setAttributes(attsAt, range: range)
-        simpleDelegate?.simplerTextStorageShouldChangeAtts(attsAt)
-        endEditing()
-        
+    func processGoodWord(word:String, atRange range:NSRange){
+        var atts = [String:AnyObject]()
+        atts[NSBackgroundColorAttributeName] = NSColor.clearColor()
+        atts[NSFontNameAttribute] = C.editorFont
+        setAttributes(atts, range: range)
+        setAttributes(atts, range: self.editedRange)
     }
     
     func processBadWord(word:String, atRange range:NSRange){
-        // 1. call delegate, so it can call a delegate
-        // 2. check prefs if we want to replace the word or just change the attribs
-        
-        //let deleteRange = NSMakeRange(range.location, range.length+1)
-        //self.replaceCharactersInRange(deleteRange, withString: "")
-//        simpleDelegate?.simplerTextStorageGotComplexWordAtRange(deleteRange)
-        
-        var attsAt = attributesAtIndex(range.location, longestEffectiveRange: nil, inRange: range)
-        attsAt[NSBackgroundColorAttributeName] = NSColor.yellowColor()
-        setAttributes(attsAt, range: range)
+        var atts = [String:AnyObject]()
+        atts[NSBackgroundColorAttributeName] = NSColor.yellowColor()
+        atts[NSFontNameAttribute] = C.editorFont
+        setAttributes(atts, range: range)
     }
     
     override func replaceCharactersInRange(range: NSRange, withString str: String) {
-//        Swift.print("##replacing range: \(range) with string: \(str)")
         beginEditing()
             backingStore.replaceCharactersInRange(range, withString: str)
             let change = (str as NSString).length - range.length
@@ -143,8 +134,6 @@ class SimplerTextStorage: NSTextStorage {
     }
     
     override func setAttributes(attrs: [String : AnyObject]?, range: NSRange) {
-        //Swift.print("setAttributes: \(attrs) with range: \(range)")
-        
         beginEditing()
             backingStore.setAttributes(attrs, range: range)
             edited(NSTextStorageEditActions.EditedAttributes, range: range, changeInLength: 0)
@@ -152,6 +141,41 @@ class SimplerTextStorage: NSTextStorage {
     }
     
     
+    func tokenAtIndex(index:Int, inString str:NSString) -> (range:NSRange, token:String) {
+        let tokenType = NSLinguisticTagSchemeTokenType
+//        let lexi = NSLinguisticTagSchemeNameTypeOrLexicalClass
+        let tagger = NSLinguisticTagger(tagSchemes: [tokenType], options: 0)
+        var r : NSRange = NSMakeRange(0, 0)
+        tagger.string = str as String
+        let tag = tagger.tagAtIndex(index, scheme: tokenType, tokenRange: &r, sentenceRange: nil)
+//        let lexitag = tagger.tagAtIndex(index, scheme: lexi, tokenRange: &r, sentenceRange: nil)
+        return(range:r, token:tag!)
+    }
+    
+    
+    
+    func wordRangeAtIndex(index:Int, inString str:NSString) -> NSRange? {
+        
+        let options = (NSLinguisticTaggerOptions.OmitWhitespace.rawValue)
+        let tagger = NSLinguisticTagger(tagSchemes: [NSLinguisticTagSchemeTokenType],
+                                        options: Int(options))
+        
+        var r : NSRange = NSMakeRange(0,0)
+        tagger.string = str as String
+        
+        let tag = tagger.tagAtIndex(index, scheme: NSLinguisticTagSchemeTokenType, tokenRange: &r, sentenceRange: nil)
+
+        if tag == NSLinguisticTagWord {
+            return r
+        } else
+        {
+            return nil
+        }
+    }
+//    
+//    func wordAtIndex(index:Int, inString str:NSString) -> NSString {
+//        return str.substringWithRange(wordRangeAtIndex(index, inString: str))
+//    }
 
 
 }
