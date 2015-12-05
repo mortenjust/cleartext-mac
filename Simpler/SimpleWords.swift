@@ -36,16 +36,18 @@ class SimpleWords: NSObject {
     func isSimpleWord(word:String) -> Bool {
         if word.characters.count == 1 { return true }
         getArray()
+        
         if allWords.contains(word.lowercaseString) {
-            print("\(word) is simple in \(self.languageCode)")
             return true
         }
         
-        print("\(word) is difficult in \(self.languageCode)")
         return false
+        
+
     }
     
     func readWordsForLanguage(languageCode:String = "en"){
+        print("loading file for \(languageCode)")
         self.languageCode = languageCode
         let fileName = getFilenameForLanguageCode(languageCode)
         

@@ -10,6 +10,8 @@ import Cocoa
 
 class Document: NSDocument {
     var contents: NSString = ""
+    var simplerTextView: SimplerTextView!
+
 
     override init() {
         super.init()
@@ -33,13 +35,12 @@ class Document: NSDocument {
     }
 
     override func dataOfType(typeName: String) throws -> NSData {
-        return contents.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
+        return simplerTextView.string!.dataUsingEncoding(NSUTF8StringEncoding, allowLossyConversion: false)!
     }
 
     override func readFromData(data: NSData, ofType typeName: String) throws {
         if data.length > 0 {
             self.contents = NSString(data: data, encoding: NSUTF8StringEncoding)!
-            
         }
         
     }

@@ -14,72 +14,43 @@ protocol SimplerTextViewDelegate {
     func simplerTextViewGotComplexWord()
 }
 
-class SimplerTextView: NSTextView {
-    var simpleWords = SimpleWords()
+class SimplerTextView: NSTextView, SimplerTextStorageDelegate {
     var simplerDelegate:SimplerTextViewDelegate!
+    var simplerStorage: SimplerTextStorage!
+    
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        font = NSFont(name: "Avenir Next", size: 23)
+
+        resetFormatting()
+        simplerStorage = SimplerTextStorage()
+        simplerStorage.simpleDelegate = self
+        simplerStorage.layoutManager = layoutManager!
+        
+        layoutManager?.replaceTextStorage(simplerStorage)
+        wantsLayer = true
+    }
+    
+    
+    
+    func simplerTextStorageGotComplexWordAtRange(range:NSRange) {
+        Swift.print("setting range to \(range)")
+        simplerDelegate.simplerTextViewGotComplexWord()
+    }
+    
+    func simplerTextStorageShouldChangeAtts(atts: [String : AnyObject]) {
+        resetFormatting()
+    }
+    
+    func resetFormatting(){
+        font = C.editorFont
         backgroundColor = C.editorBackgroundColor
         textColor = C.editorTextColor
-//        insertionPointColor = NSColor(red:1, green:1, blue:1, alpha:1)
-        wantsLayer = true
-        frame.origin.x += 1000
-        
-        simpleWords.loadDictionaryFromPrefs()
     }
     
-    override func keyUp(theEvent: NSEvent) {
-        if theEvent.characters == " "
-            || theEvent.characters == ","
-            || theEvent.characters == "."
-            || theEvent.characters == "?"
-            || theEvent.characters == ";"
-        {
-            checkDocument(theEvent.characters!)
-        }
-        
-        if theEvent.characters != nil {
-            simplerDelegate.simplerTextViewKeyUp(theEvent.characters!)
-            }
-    }
-    
-    func checkDocument(trigger:String){
-        let storage = textStorage?.string
-        let words = storage!.characters.split{$0 == " "}.map(String.init)
-        if let word = words.last {
-            checkWord(word, trigger: trigger)
-        }
-    }
-    
-    func checkWord(word:String, trigger:String){
-        var w = word.stringByReplacingOccurrencesOfString(".", withString: "")
-        w = w.stringByReplacingOccurrencesOfString(",", withString: "")
-        w = w.stringByReplacingOccurrencesOfString("?", withString: "")
-        w = w.stringByReplacingOccurrencesOfString(";", withString: "")
-        w = w.stringByReplacingOccurrencesOfString("\n", withString: "")
-        
-        if simpleWords.isSimpleWord(w){
-            // let it live!
-        } else {
-            // kill it!
-            simplerDelegate.simplerTextViewGotComplexWord()
-            
-            // remove the shit
-            if NSUserDefaults.standardUserDefaults().boolForKey(C.PREF_REMOVEIMMEDIATELY) {
-                self.string = NSString(string: self.string!).stringByReplacingOccurrencesOfString("\(w)\(trigger)", withString:"")
-                }
-            
-            // set current selection
-            
-        }
-    }
-    
-    
-    
-    func shake(){        
-        simplerDelegate.simplerTextViewGotComplexWord()
+    override func didChangeText() {
+        super.didChangeText()
+        resetFormatting()
     }
     
     override func drawRect(dirtyRect: NSRect) {

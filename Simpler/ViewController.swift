@@ -14,6 +14,7 @@ class ViewController: NSViewController, SimplerTextViewDelegate {
     
     @IBOutlet var editor: SimplerTextView!
     var document:Document!
+    var allText = NSAttributedString()
     
     override func viewWillAppear() {
         let win = self.view.window!
@@ -28,6 +29,10 @@ class ViewController: NSViewController, SimplerTextViewDelegate {
         editor.string = document.contents as String
     }
     
+    override func viewDidAppear() {
+        document.simplerTextView = self.editor
+    }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,14 +40,17 @@ class ViewController: NSViewController, SimplerTextViewDelegate {
     }
     
     @IBAction func changeLanguage(sender: LanguagePopupButton) {
-        print("new language is, and loading from prefs "+(sender.selectedItem?.title)!)
-        editor.simpleWords.loadDictionaryForCode((sender.selectedItem?.title)!)
+        print("new language, loading from prefs "+(sender.selectedItem?.title)!)
+        
+        let attr = editor.attributedString().fontAttributesInRange(NSMakeRange(1, 1))
+        let linefeed = NSAttributedString(string: "\n\n", attributes: attr)
+        editor.textStorage?.appendAttributedString(linefeed)
+        editor.simplerStorage.checker.loadDictionaryForCode((sender.selectedItem?.title)!)
     }
-    
     
     func makeBadSound(){
         if NSUserDefaults.standardUserDefaults().boolForKey(C.PREF_MAKESOUND) {
-            NSSound(named: "Basso")!.play()
+            NSSound(named: "Basso")?.play()
             }
     }
     
@@ -92,7 +100,7 @@ class ViewController: NSViewController, SimplerTextViewDelegate {
     
     
     func simplerTextViewKeyUp(character: String) {
-        document.contents = "\(document.contents)\(character)"
+
     }
 
     override var representedObject: AnyObject? {

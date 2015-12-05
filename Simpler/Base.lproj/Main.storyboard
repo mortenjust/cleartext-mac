@@ -781,6 +781,8 @@
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController id="PjD-nM-8CT"/>
+                <userDefaultsController id="KhH-0C-hjA"/>
+                <userDefaultsController id="nk0-BI-RDD" customClass="Document"/>
             </objects>
             <point key="canvasLocation" x="80" y="904.5"/>
         </scene>
