@@ -37,6 +37,7 @@ class C: NSObject {
     static let languages = [
         Language(code: "da", name: "da"),
         Language(code: "en", name: "en"),
+        Language(code: "de", name: "de"),
         Language(code: "xkcd", name: "xkcd"),
         Language(code: "jobs", name: "jobs"),
         Language(code: "hemingway", name: "hemingway")
