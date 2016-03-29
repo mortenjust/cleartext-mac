@@ -30,7 +30,7 @@ class SimplerTextView: NSTextView, SimplerTextStorageDelegate {
         layoutManager?.replaceTextStorage(simplerStorage)
         wantsLayer = true
         
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "selectionDidChange:", name: NSTextViewDidChangeSelectionNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SimplerTextView.selectionDidChange(_:)), name: NSTextViewDidChangeSelectionNotification, object: nil)
 
     }
     
