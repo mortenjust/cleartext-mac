@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10116"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -713,7 +713,6 @@
                                         <textView autoresizesSubviews="NO" importsGraphics="NO" horizontallyResizable="YES" selectionGranularity="word" findStyle="panel" continuousSpellChecking="YES" allowsDocumentBackgroundColorChange="YES" allowsUndo="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="wst-9R-GU0" customClass="SimplerTextView" customModule="Cleartext" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="460" height="422"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <size key="minSize" width="460" height="422"/>
                                             <size key="maxSize" width="460" height="10000000"/>
@@ -722,19 +721,15 @@
                                             <size key="maxSize" width="460" height="10000000"/>
                                         </textView>
                                     </subviews>
-                                    <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </clipView>
-                                <animations/>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="o2P-e6-ldJ">
                                     <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="PKT-cy-04P">
                                     <rect key="frame" x="444" y="0.0" width="16" height="422"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
                                 </scroller>
                             </scrollView>
                             <popUpButton translatesAutoresizingMaskIntoConstraints="NO" id="fJE-h3-xGc" customClass="LanguagePopupButton" customModule="Cleartext" customModuleProvider="target">
@@ -743,7 +738,6 @@
                                     <constraint firstAttribute="height" constant="21" id="AJk-M3-bDl"/>
                                     <constraint firstAttribute="width" constant="52" id="jDy-1F-a9t"/>
                                 </constraints>
-                                <animations/>
                                 <popUpButtonCell key="cell" type="bevel" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" arrowPosition="noArrow" preferredEdge="maxY" id="bxw-s5-ry5">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
@@ -765,7 +759,6 @@
                             <constraint firstItem="W98-6N-Cuw" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="10" id="aTf-4S-pCn"/>
                             <constraint firstItem="W98-6N-Cuw" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="47" id="xVU-I6-4ay"/>
                         </constraints>
-                        <animations/>
                     </view>
                     <connections>
                         <outlet property="editor" destination="wst-9R-GU0" id="Ez7-S6-yu4"/>
