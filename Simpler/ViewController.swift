@@ -11,13 +11,19 @@ import Cocoa
 class ViewController: NSViewController, SimplerTextViewDelegate {
 
     @IBOutlet weak var languagePicker: NSPopUpButton!
-    
     @IBOutlet var editor: SimplerTextView!
+    
+    @IBOutlet weak var editorScrollView: NSScrollView!
+    
+    @IBOutlet weak var trumpSealImageView: NSImageView!
+    
+    var win : NSWindow!
+    
     var document:Document!
     var allText = NSAttributedString()
     
     override func viewWillAppear() {
-        let win = self.view.window!
+        win = self.view.window!
         let winController = self.view.window?.windowController
         document = winController!.document as! Document
         
@@ -26,6 +32,7 @@ class ViewController: NSViewController, SimplerTextViewDelegate {
         win.styleMask = win.styleMask | NSFullSizeContentViewWindowMask;
         win.title = ""
         win.backgroundColor = C.editorBackgroundColor
+        
         editor.string = document.contents as String
     }
     
@@ -37,11 +44,31 @@ class ViewController: NSViewController, SimplerTextViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         editor.simplerDelegate = self
+        showLanguageBackdrop()
     }
     
+    func showTrump(){
+        trumpSealImageView.alphaValue = 0.6
+    }
+    func hideTrump(){
+        trumpSealImageView.alphaValue = 0.0
+    }
+    
+    func showLanguageBackdrop(){
+        if let languageCode = NSUserDefaults.standardUserDefaults().stringForKey("language") {
+            if languageCode == "Trump" {
+                showTrump()
+            } else {
+                hideTrump()
+            }
+        }
+    }
+    
+    
     @IBAction func changeLanguage(sender: LanguagePopupButton) {
-        print("new language, loading from prefs "+(sender.selectedItem?.title)!)
-        
+        let langId = (sender.selectedItem?.title)!
+        print("new language, loading from prefs "+langId)
+        showLanguageBackdrop()
         let attr = editor.attributedString().fontAttributesInRange(NSMakeRange(1, 1))
         let linefeed = NSAttributedString(string: "\n\n", attributes: attr)
         editor.textStorage?.appendAttributedString(linefeed)
@@ -55,28 +82,33 @@ class ViewController: NSViewController, SimplerTextViewDelegate {
     }
     
     func simplerTextViewGotComplexWord() {
-        makeBadSound()
+
+        
+        
         playBeginAnimation { () -> Void in
             self.playEndAnimation({ () -> Void in })
         }
+        makeBadSound()
     }
     
     
+    
     func playBeginAnimation(completion:()->Void){
+        editorScrollView.wantsLayer = true
+
         CATransaction.begin()
-            editor.wantsLayer = true
-            editor.layerContentsRedrawPolicy = .OnSetNeedsDisplay
-            let frame = CGRectOffset(editor.frame, 5, 0)
+            editorScrollView.layerContentsRedrawPolicy = .OnSetNeedsDisplay
+            let frame = CGRectOffset(editorScrollView.frame, 10, 0)
             let anim = CABasicAnimation(keyPath: "position")
             anim.fromValue = NSValue(point: frame.origin)
             anim.autoreverses = false
-            anim.duration = 0.3
-            anim.removedOnCompletion = true
-            anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseIn )
+            anim.duration = 0.15
+            anim.removedOnCompletion = false
+            anim.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut )
         CATransaction.setCompletionBlock { () -> Void in
             completion()
         }
-        editor.layer?.addAnimation(anim, forKey: anim.keyPath)
+        editorScrollView.layer!.addAnimation(anim, forKey: anim.keyPath)
         CATransaction.commit()
     }
     
