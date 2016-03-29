@@ -18,34 +18,54 @@ class SimplerTextView: NSTextView, SimplerTextStorageDelegate {
     var simplerDelegate:SimplerTextViewDelegate!
     var simplerStorage: SimplerTextStorage!
     
-    
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-
-        resetFormatting()
+        wantsLayer = true
         simplerStorage = SimplerTextStorage()
         simplerStorage.simpleDelegate = self
-        simplerStorage.layoutManager = layoutManager!
-        
+        simplerStorage.addLayoutManager(layoutManager!)
         layoutManager?.replaceTextStorage(simplerStorage)
-        wantsLayer = true
-        
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: "selectionDidChange:", name: NSTextViewDidChangeSelectionNotification, object: nil)
 
+        resetFormatting()
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "selectionDidChange:", name: NSTextViewDidChangeSelectionNotification, object: nil)
     }
     
     func selectionDidChange(n:NSNotification){
-        simplerStorage.selectionDidChange(self.selectedRange())
+        Swift.print("view:selectiondidchange")
+        Swift.print("---inwhich the selected range is \(self.selectedRange())")
+         simplerStorage.selectionDidChange(self.selectedRange())
+    }
 
+    func simplerTextStorageGotComplexWord() {
+        simplerDelegate.simplerTextViewGotComplexWord()
+        resetSelection()
     }
     
+    func resetSelection(){
+        setSelectedRange(NSMakeRange(0, 0))
+    }
+
+    
     func simplerTextStorageGotComplexWordAtRange(range:NSRange) {
-        Swift.print("setting range to \(range)")
+        Swift.print("view:gotcomplexword")
+        Swift.print("textview:setting range to \(range)")
         simplerDelegate.simplerTextViewGotComplexWord()
+        setSelectedRange(range)
     }
     
     func simplerTextStorageShouldChangeAtts(atts: [String : AnyObject]) {
+        Swift.print("view:shouldchangeatts")
         resetFormatting()
+    }
+    
+    override func shouldChangeTextInRange(affectedCharRange: NSRange, replacementString: String?) -> Bool {
+        Swift.print("view:shouldChangeTextInRange")
+        return true
+    }
+    
+    override func shouldChangeTextInRanges(affectedRanges: [NSValue], replacementStrings: [String]?) -> Bool {
+        Swift.print("view:shouldChangeTextInRangeSSSS")
+        return true
     }
     
     func resetFormatting(){
@@ -56,7 +76,7 @@ class SimplerTextView: NSTextView, SimplerTextStorageDelegate {
     
     override func didChangeText() {
         super.didChangeText()
-        resetFormatting()
+        
     }
     
     override func drawRect(dirtyRect: NSRect) {

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15E65" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9060"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="9532"/>
     </dependencies>
     <scenes>
         <!--Application-->
@@ -710,40 +710,42 @@
                                     <rect key="frame" x="0.0" y="0.0" width="460" height="422"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <textView autoresizesSubviews="NO" importsGraphics="NO" horizontallyResizable="YES" selectionGranularity="word" findStyle="panel" continuousSpellChecking="YES" allowsDocumentBackgroundColorChange="YES" allowsUndo="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="wst-9R-GU0" customClass="SimplerTextView" customModule="Cleartext" customModuleProvider="target">
+                                        <textView autoresizesSubviews="NO" importsGraphics="NO" richText="NO" horizontallyResizable="YES" findStyle="panel" continuousSpellChecking="YES" allowsDocumentBackgroundColorChange="YES" allowsUndo="YES" verticallyResizable="YES" allowsNonContiguousLayout="YES" quoteSubstitution="YES" dashSubstitution="YES" smartInsertDelete="YES" id="wst-9R-GU0" customClass="SimplerTextView" customModule="Cleartext" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="460" height="422"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             <size key="minSize" width="460" height="422"/>
                                             <size key="maxSize" width="460" height="10000000"/>
+                                            <attributedString key="textStorage">
+                                                <fragment content=" ">
+                                                    <attributes>
+                                                        <font key="NSFont" size="23" name="AvenirNext-Regular"/>
+                                                        <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                                    </attributes>
+                                                </fragment>
+                                            </attributedString>
                                             <color key="insertionPointColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                             <size key="minSize" width="460" height="422"/>
                                             <size key="maxSize" width="460" height="10000000"/>
                                         </textView>
                                     </subviews>
-                                    <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </clipView>
-                                <animations/>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="YES" id="o2P-e6-ldJ">
                                     <rect key="frame" x="-100" y="-100" width="87" height="18"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="NO" id="PKT-cy-04P">
                                     <rect key="frame" x="444" y="0.0" width="16" height="422"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <animations/>
                                 </scroller>
                             </scrollView>
                             <popUpButton translatesAutoresizingMaskIntoConstraints="NO" id="fJE-h3-xGc" customClass="LanguagePopupButton" customModule="Cleartext" customModuleProvider="target">
-                                <rect key="frame" x="428" y="10" width="52" height="21"/>
+                                <rect key="frame" x="410" y="10" width="70" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="AJk-M3-bDl"/>
-                                    <constraint firstAttribute="width" constant="52" id="jDy-1F-a9t"/>
+                                    <constraint firstAttribute="width" constant="70" id="jDy-1F-a9t"/>
                                 </constraints>
-                                <animations/>
                                 <popUpButtonCell key="cell" type="bevel" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" arrowPosition="noArrow" preferredEdge="maxY" id="bxw-s5-ry5">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="menu"/>
@@ -756,20 +758,31 @@
                                     <action selector="changeLanguage:" target="5gI-5U-AMq" id="lug-o3-ECo"/>
                                 </connections>
                             </popUpButton>
+                            <imageView translatesAutoresizingMaskIntoConstraints="NO" id="wPB-eg-6vc">
+                                <rect key="frame" x="90" y="100" width="300" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="nEf-Aa-dNm"/>
+                                    <constraint firstAttribute="width" constant="300" id="nFf-RT-GfY"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" animates="YES" imageScaling="proportionallyDown" image="trumpBackground" id="rVq-v5-eAc"/>
+                            </imageView>
                         </subviews>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="W98-6N-Cuw" secondAttribute="trailing" constant="10" id="6qB-SI-gtC"/>
                             <constraint firstAttribute="bottom" secondItem="fJE-h3-xGc" secondAttribute="bottom" constant="10" id="CGh-8p-reP"/>
                             <constraint firstAttribute="bottom" secondItem="W98-6N-Cuw" secondAttribute="bottom" constant="31" id="CRj-bQ-1LL"/>
                             <constraint firstAttribute="trailing" secondItem="fJE-h3-xGc" secondAttribute="trailing" id="PNW-TX-fQp"/>
+                            <constraint firstItem="wPB-eg-6vc" firstAttribute="centerX" secondItem="ERx-hH-rdd" secondAttribute="centerX" id="Xqj-d7-6Dk"/>
                             <constraint firstItem="W98-6N-Cuw" firstAttribute="leading" secondItem="ERx-hH-rdd" secondAttribute="leading" constant="10" id="aTf-4S-pCn"/>
+                            <constraint firstItem="wPB-eg-6vc" firstAttribute="centerY" secondItem="ERx-hH-rdd" secondAttribute="centerY" id="gOH-0k-nI6"/>
                             <constraint firstItem="W98-6N-Cuw" firstAttribute="top" secondItem="ERx-hH-rdd" secondAttribute="top" constant="47" id="xVU-I6-4ay"/>
                         </constraints>
-                        <animations/>
                     </view>
                     <connections>
                         <outlet property="editor" destination="wst-9R-GU0" id="Ez7-S6-yu4"/>
+                        <outlet property="editorScrollView" destination="W98-6N-Cuw" id="fe6-Ii-QfW"/>
                         <outlet property="languagePicker" destination="fJE-h3-xGc" id="LBQ-qq-f8j"/>
+                        <outlet property="trumpSealImageView" destination="wPB-eg-6vc" id="4Vu-F1-bto"/>
                     </connections>
                 </viewController>
                 <customObject id="2Tp-Fl-jBw" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -780,4 +793,7 @@
             <point key="canvasLocation" x="80" y="904"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="trumpBackground" width="614" height="614"/>
+    </resources>
 </document>

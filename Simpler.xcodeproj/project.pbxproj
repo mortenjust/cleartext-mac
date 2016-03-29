@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B85A9B31C11B6AE000EC95B /* nl.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5B85A9B21C11B6AE000EC95B /* nl.txt */; };
+		C82978611CAA337E00839628 /* Trump.txt in Resources */ = {isa = PBXBuildFile; fileRef = C82978601CAA337E00839628 /* Trump.txt */; };
 		C84079D71C06F153002EC6D4 /* da.txt in Resources */ = {isa = PBXBuildFile; fileRef = C84079D61C06F153002EC6D4 /* da.txt */; };
 		C84079DA1C07E422002EC6D4 /* LanguagePopupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84079D91C07E422002EC6D4 /* LanguagePopupButton.swift */; };
 		C84079DC1C07FABE002EC6D4 /* xkcd.txt in Resources */ = {isa = PBXBuildFile; fileRef = C84079DB1C07FABE002EC6D4 /* xkcd.txt */; };
@@ -26,13 +28,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5B85A9B21C11B6AE000EC95B /* nl.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nl.txt; sourceTree = "<group>"; };
+		C82978601CAA337E00839628 /* Trump.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Trump.txt; sourceTree = "<group>"; };
 		C84079D61C06F153002EC6D4 /* da.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = da.txt; sourceTree = "<group>"; };
-		C84079D91C07E422002EC6D4 /* LanguagePopupButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LanguagePopupButton.swift; path = Simpler/LanguagePopupButton.swift; sourceTree = "<group>"; };
+		C84079D91C07E422002EC6D4 /* LanguagePopupButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagePopupButton.swift; sourceTree = "<group>"; };
 		C84079DB1C07FABE002EC6D4 /* xkcd.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = xkcd.txt; sourceTree = "<group>"; };
 		C84079DD1C083D9B002EC6D4 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		C84079DE1C083EC6002EC6D4 /* jobs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jobs.txt; sourceTree = "<group>"; };
 		C84079E01C0BBE5B002EC6D4 /* SimplerTextStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplerTextStorage.swift; sourceTree = "<group>"; };
-		C86C15F41C13656F00E22CEC /* ParkBenchTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParkBenchTimer.swift; path = Simpler/ParkBenchTimer.swift; sourceTree = "<group>"; };
+		C86C15F41C13656F00E22CEC /* ParkBenchTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkBenchTimer.swift; sourceTree = "<group>"; };
 		C86C6F3B1C01A5EF00A21B0A /* Cleartext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cleartext.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C86C6F3E1C01A5EF00A21B0A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C86C6F401C01A5EF00A21B0A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -61,8 +65,10 @@
 		C84079D81C0786FA002EC6D4 /* dictionaries */ = {
 			isa = PBXGroup;
 			children = (
+				C82978601CAA337E00839628 /* Trump.txt */,
 				C8A42ABF1C0C306B00ECED04 /* hemingway.txt */,
 				C84079DE1C083EC6002EC6D4 /* jobs.txt */,
+				5B85A9B21C11B6AE000EC95B /* nl.txt */,
 				C84079DB1C07FABE002EC6D4 /* xkcd.txt */,
 				C86C6F531C01AFA700A21B0A /* en.txt */,
 				C84079D61C06F153002EC6D4 /* da.txt */,
@@ -73,9 +79,7 @@
 		C86C6F321C01A5EF00A21B0A = {
 			isa = PBXGroup;
 			children = (
-				C86C15F41C13656F00E22CEC /* ParkBenchTimer.swift */,
 				C84079DD1C083D9B002EC6D4 /* MyPlayground.playground */,
-				C84079D91C07E422002EC6D4 /* LanguagePopupButton.swift */,
 				C86C6F3D1C01A5EF00A21B0A /* Simpler */,
 				C86C6F3C1C01A5EF00A21B0A /* Products */,
 			);
@@ -92,16 +96,18 @@
 		C86C6F3D1C01A5EF00A21B0A /* Simpler */ = {
 			isa = PBXGroup;
 			children = (
+				C84079D91C07E422002EC6D4 /* LanguagePopupButton.swift */,
+				C86C15F41C13656F00E22CEC /* ParkBenchTimer.swift */,
 				C86C6F3E1C01A5EF00A21B0A /* AppDelegate.swift */,
 				C86C6F401C01A5EF00A21B0A /* ViewController.swift */,
 				C84079E01C0BBE5B002EC6D4 /* SimplerTextStorage.swift */,
+				C86C6F4F1C01AAE600A21B0A /* SimplerTextView.swift */,
 				C8B24E361C030F4200FF0FDA /* C.swift */,
 				C86C6F421C01A5EF00A21B0A /* Document.swift */,
 				C86C6F441C01A5EF00A21B0A /* Assets.xcassets */,
 				C86C6F461C01A5EF00A21B0A /* Main.storyboard */,
 				C86C6F511C01AF7E00A21B0A /* SimpleWords.swift */,
 				C84079D81C0786FA002EC6D4 /* dictionaries */,
-				C86C6F4F1C01AAE600A21B0A /* SimplerTextView.swift */,
 				C86C6F491C01A5EF00A21B0A /* Info.plist */,
 			);
 			path = Simpler;
@@ -167,11 +173,13 @@
 			files = (
 				C86C6F451C01A5EF00A21B0A /* Assets.xcassets in Resources */,
 				C86C6F541C01AFA700A21B0A /* en.txt in Resources */,
+				5B85A9B31C11B6AE000EC95B /* nl.txt in Resources */,
 				C86C6F481C01A5EF00A21B0A /* Main.storyboard in Resources */,
 				C84079D71C06F153002EC6D4 /* da.txt in Resources */,
 				C8A42AC01C0C306B00ECED04 /* hemingway.txt in Resources */,
 				C84079DF1C083EC6002EC6D4 /* jobs.txt in Resources */,
 				C84079DC1C07FABE002EC6D4 /* xkcd.txt in Resources */,
+				C82978611CAA337E00839628 /* Trump.txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
