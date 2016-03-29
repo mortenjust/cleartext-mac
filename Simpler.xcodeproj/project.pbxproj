@@ -29,7 +29,6 @@
 		C84079D61C06F153002EC6D4 /* da.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = da.txt; sourceTree = "<group>"; };
 		C84079D91C07E422002EC6D4 /* LanguagePopupButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = LanguagePopupButton.swift; path = Simpler/LanguagePopupButton.swift; sourceTree = "<group>"; };
 		C84079DB1C07FABE002EC6D4 /* xkcd.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = xkcd.txt; sourceTree = "<group>"; };
-		C84079DD1C083D9B002EC6D4 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
 		C84079DE1C083EC6002EC6D4 /* jobs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jobs.txt; sourceTree = "<group>"; };
 		C84079E01C0BBE5B002EC6D4 /* SimplerTextStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplerTextStorage.swift; sourceTree = "<group>"; };
 		C86C15F41C13656F00E22CEC /* ParkBenchTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ParkBenchTimer.swift; path = Simpler/ParkBenchTimer.swift; sourceTree = "<group>"; };
@@ -74,7 +73,6 @@
 			isa = PBXGroup;
 			children = (
 				C86C15F41C13656F00E22CEC /* ParkBenchTimer.swift */,
-				C84079DD1C083D9B002EC6D4 /* MyPlayground.playground */,
 				C84079D91C07E422002EC6D4 /* LanguagePopupButton.swift */,
 				C86C6F3D1C01A5EF00A21B0A /* Simpler */,
 				C86C6F3C1C01A5EF00A21B0A /* Products */,
