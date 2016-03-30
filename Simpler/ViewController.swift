@@ -61,6 +61,8 @@ class ViewController: NSViewController, SimplerTextViewDelegate {
             } else {
                 hideTrump()
             }
+        } else {
+            hideTrump()
         }
     }
     
