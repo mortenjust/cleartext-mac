@@ -11,7 +11,7 @@ I just got Randall Monroe's new book <a href="https://xkcd.com/thing-explainer/"
 
 Use it to tell your family members why their computers act up, or tell people at work why they should pay you more. 
 
-### Now with Trump mode
+### Trump mode
 Trained with a few of Trump's best known speeches, the app is now ready to help you write like a billionaire. 
 <img src="https://github.com/mortenjust/cleartext-mac/blob/master/UX/trumpdemo.gif?raw=true">
 
@@ -22,3 +22,7 @@ Trained with a few of Trump's best known speeches, the app is now ready to help 
 * <a href="https://xkcd.com/thing-explainer/">Randall Monroe: Thing Explainer</a>
 * <a href="http://www.newyorker.com/tech/elements/the-space-doctors-big-idea-einstein-general-relativity">The Space Doctor's Big Idea</a>
 * <a href="https://www.youtube.com/watch?v=Ac7G7xOG2Ag">Turbo Encabulator</a>
+
+* Lifehacker: <a href="http://lifehacker.com/cleartext-limits-your-writing-to-the-1-000-most-common-1767763948">Cleartext Limits Your Writing to the 1,000 Most Common Words in English</a>
+* The Telegraph: <a href="http://www.telegraph.co.uk/technology/2016/03/27/the-1000-most-used-words-in-english--in-one-genius-app/">The 1,000 most used words in English – in one genius app</a>
+* <a href="https://www.producthunt.com/tech/cleartext-2">Product Hunt</a>
