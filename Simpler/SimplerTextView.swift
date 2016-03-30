@@ -31,8 +31,8 @@ class SimplerTextView: NSTextView, SimplerTextStorageDelegate {
     }
     
     func selectionDidChange(n:NSNotification){
-        Swift.print("view:selectiondidchange")
-        Swift.print("---inwhich the selected range is \(self.selectedRange())")
+//        Swift.print("view:selectiondidchange")
+//        Swift.print("---inwhich the selected range is \(self.selectedRange())")
          simplerStorage.selectionDidChange(self.selectedRange())
     }
 
@@ -47,24 +47,24 @@ class SimplerTextView: NSTextView, SimplerTextStorageDelegate {
 
     
     func simplerTextStorageGotComplexWordAtRange(range:NSRange) {
-        Swift.print("view:gotcomplexword")
-        Swift.print("textview:setting range to \(range)")
+//        Swift.print("view:gotcomplexword")
+//        Swift.print("textview:setting range to \(range)")
         simplerDelegate.simplerTextViewGotComplexWord()
         setSelectedRange(range)
     }
     
     func simplerTextStorageShouldChangeAtts(atts: [String : AnyObject]) {
-        Swift.print("view:shouldchangeatts")
+//        Swift.print("view:shouldchangeatts")
         resetFormatting()
     }
     
     override func shouldChangeTextInRange(affectedCharRange: NSRange, replacementString: String?) -> Bool {
-        Swift.print("view:shouldChangeTextInRange")
+//        Swift.print("view:shouldChangeTextInRange")
         return true
     }
     
     override func shouldChangeTextInRanges(affectedRanges: [NSValue], replacementStrings: [String]?) -> Bool {
-        Swift.print("view:shouldChangeTextInRangeSSSS")
+//        Swift.print("view:shouldChangeTextInRangeSSSS")
         return true
     }
     

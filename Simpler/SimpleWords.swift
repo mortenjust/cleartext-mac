@@ -34,7 +34,18 @@ class SimpleWords: NSObject {
     }
     
     func isSimpleWord(word:String) -> Bool {
+        print("checking \(word)")
+        
+        // simple check first: One-letter words, numbers, contractions, go!
         if word.characters.count == 1 { return true }
+        if word.characters.contains("'") { return true }
+        let digits = NSCharacterSet.decimalDigitCharacterSet()
+        if digits.longCharacterIsMember((word.unicodeScalars.first?.value)!) {
+            return true
+        }
+        
+        print("not simple, using dictionary")
+        
         getArray()
         
         if allWords.contains(word.lowercaseString) {
