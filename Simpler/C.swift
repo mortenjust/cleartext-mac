@@ -27,10 +27,10 @@ class C: NSObject {
     ]
 
     static let PREF_MAKESOUND = "makeSound"
-    static let PREF_REMOVEIMMEDIATELY = "removeImmediately"
+    static let PREF_FORCESELECT = "forceSelect"
     static let defaultPrefValues = [
         "makeSound":true,
-        "removeImmediately":true,
+        "forceSelect":true,
         "language":"en"
     ]
 

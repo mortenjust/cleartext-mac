@@ -45,8 +45,6 @@ class SimplerTextStorage: NSTextStorage {
     override func processEditing() {
         super.processEditing()
 
-        // find out if we have a full word, and if so, test it
-        
         if editedRange.length > 0 && editedRange.location < backingStore.string.characters.count  {
             
             let token = tokenAtIndex(editedRange.location, inString: backingStore.string)
@@ -62,7 +60,6 @@ class SimplerTextStorage: NSTextStorage {
                 currentWord = (word: word, token.range) // build it!
             }
         }
-
     }
     
     func performReplacementsForRange(changedRange: NSRange) {

@@ -355,10 +355,10 @@
                                                 <binding destination="y4Y-3J-iBV" name="value" keyPath="values.makeSound" id="NSa-Lm-LKO"/>
                                             </connections>
                                         </menuItem>
-                                        <menuItem title="Remove immediately" state="on" id="q3O-zt-M5W">
+                                        <menuItem title="Force select" state="on" id="q3O-zt-M5W">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
-                                                <binding destination="y4Y-3J-iBV" name="value" keyPath="values.removeImmediately" id="A8b-Mq-WDU"/>
+                                                <binding destination="y4Y-3J-iBV" name="value" keyPath="values.forceSelect" id="bph-0Y-jj3"/>
                                             </connections>
                                         </menuItem>
                                     </items>

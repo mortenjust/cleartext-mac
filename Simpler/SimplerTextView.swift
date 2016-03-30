@@ -38,33 +38,27 @@ class SimplerTextView: NSTextView, SimplerTextStorageDelegate {
 
     func simplerTextStorageGotComplexWord() {
         simplerDelegate.simplerTextViewGotComplexWord()
-        resetSelection()
+
     }
     
-    func resetSelection(){
-        setSelectedRange(NSMakeRange(0, 0))
-    }
-
     
     func simplerTextStorageGotComplexWordAtRange(range:NSRange) {
-//        Swift.print("view:gotcomplexword")
-//        Swift.print("textview:setting range to \(range)")
         simplerDelegate.simplerTextViewGotComplexWord()
-        setSelectedRange(range)
+        
+        if(NSUserDefaults.standardUserDefaults().boolForKey(C.PREF_FORCESELECT)){
+            setSelectedRange(range)
+            }
     }
     
     func simplerTextStorageShouldChangeAtts(atts: [String : AnyObject]) {
-//        Swift.print("view:shouldchangeatts")
-        resetFormatting()
+
     }
     
     override func shouldChangeTextInRange(affectedCharRange: NSRange, replacementString: String?) -> Bool {
-//        Swift.print("view:shouldChangeTextInRange")
         return true
     }
     
     override func shouldChangeTextInRanges(affectedRanges: [NSValue], replacementStrings: [String]?) -> Bool {
-//        Swift.print("view:shouldChangeTextInRangeSSSS")
         return true
     }
     
