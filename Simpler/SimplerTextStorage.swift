@@ -37,19 +37,13 @@ class SimplerTextStorage: NSTextStorage {
         fatalError("init(pasteboardPropertyList:ofType:) has not been implemented")
     }
     
-//    override func attributesAtIndex(location: Int, effectiveRange range: NSRangePointer) -> [String : AnyObject] {
-//        return backingStore.attributesAtIndex(location, effectiveRange: range)
-//    }
-    
+
     func selectionDidChange(range:NSRange){
 //        print("storage:selectionddichange")
     }
     
     override func processEditing() {
         super.processEditing()
-        
-        
-
 
         // find out if we have a full word, and if so, test it
         
@@ -91,13 +85,16 @@ class SimplerTextStorage: NSTextStorage {
         print("Looking for bad words in ::\(substringForRange(range))::")
         let word = NSString(string: string).substringWithRange(range)
         
-        if word.containsString("'") { // TODO: Deal with ' in a tidier way
+
+        let digits = NSCharacterSet.decimalDigitCharacterSet()
+        
+        // TODO: Deal with these exceptions in a tidier way. For now:
+        if word.containsString("'") || digits.longCharacterIsMember((word.unicodeScalars.first?.value)!) {
             print("contains a contraction, we'll allow that for now")
             return
         }
         
         if word.characters.count == 0 { return }
-
         let timer = ParkBenchTimer()
 
         if self.checker.isSimpleWord(word) { // could have sworn these should be the other way around. But actual response is king.
