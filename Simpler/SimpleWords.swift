@@ -46,7 +46,8 @@ class SimpleWords: NSObject {
         
         //Ignore proper nouns
         if word.capitalizedString.characters[word.startIndex] == word.characters[word.startIndex]{
-            return true
+            //But not acronyms
+            return word.uppercaseString != word
         }
         
         print("not simple, using dictionary")
