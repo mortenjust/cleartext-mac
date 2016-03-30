@@ -25,5 +25,5 @@ Trained with a few of Trump's best known speeches, the app is now ready to help 
 
 As seen on
 * Lifehacker: <a href="http://lifehacker.com/cleartext-limits-your-writing-to-the-1-000-most-common-1767763948">Cleartext Limits Your Writing to the 1,000 Most Common Words in English</a>
-* * The Telegraph: <a href="http://www.telegraph.co.uk/technology/2016/03/27/the-1000-most-used-words-in-english--in-one-genius-app/">The 1,000 most used words in English – in one genius app</a>
+* The Telegraph: <a href="http://www.telegraph.co.uk/technology/2016/03/27/the-1000-most-used-words-in-english--in-one-genius-app/">The 1,000 most used words in English – in one genius app</a>
 * <a href="https://www.producthunt.com/tech/cleartext-2">Product Hunt</a>
