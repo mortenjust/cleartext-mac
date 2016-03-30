@@ -2,13 +2,19 @@
 
 ### <a href="https://github.com/mortenjust/cleartext-mac/releases">Download for Mac 10.11+</a>
 
+### What's this?
 A text editor that only allows the 1,000 most common words in English
 
 I just got Randall Monroe's new book <a href="https://xkcd.com/thing-explainer/">Thing Explainer</a>. Only using the top 1,000 words makes the text really easy to read. I thought I would make it easy for people to write like this, so I made this application. It's cool to be clear.
 
 <img src="https://raw.githubusercontent.com/mortenjust/cleartext-mac/master/UX/cleartext.gif">
 
-Use it to tell your family members why their computers act up, or tell people at work why they should pay you more. Xkcd made a similar <a href="https://xkcd.com/simplewriter/">a web version</a>. 
+Use it to tell your family members why their computers act up, or tell people at work why they should pay you more. 
+
+### Now with Trump mode
+Trained with a few of Trump's best known speeches, the app is now ready to help you write like a billionaire. 
+<img src="https://github.com/mortenjust/cleartext-mac/blob/master/UX/trumpdemo.gif?raw=true">
+
 
 <iframe width="420" height="315" src="https://www.youtube.com/embed/Ac7G7xOG2Ag" frameborder="0" allowfullscreen></iframe>
 
