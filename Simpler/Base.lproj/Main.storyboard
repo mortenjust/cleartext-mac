@@ -338,17 +338,10 @@
                                     </items>
                                 </menu>
                             </menuItem>
-                            <menuItem title="Words" id="Otg-Yy-uco">
+                            <menuItem title="Correct" id="Otg-Yy-uco">
                                 <modifierMask key="keyEquivalentModifierMask"/>
-                                <menu key="submenu" title="Words" id="VqR-mX-kEr">
+                                <menu key="submenu" title="Correct" id="VqR-mX-kEr">
                                     <items>
-                                        <menuItem title="Language" id="tWE-i4-IRS">
-                                            <modifierMask key="keyEquivalentModifierMask"/>
-                                            <menu key="submenu" title="Language" id="GKk-cv-b84"/>
-                                            <connections>
-                                                <action selector="languageClicked:" target="Voe-Tx-rLC" id="hnW-GX-bC3"/>
-                                            </connections>
-                                        </menuItem>
                                         <menuItem title="Make sound" state="on" id="dRo-Wd-GNh">
                                             <modifierMask key="keyEquivalentModifierMask"/>
                                             <connections>
@@ -668,11 +661,7 @@
                         <outlet property="delegate" destination="Voe-Tx-rLC" id="PrD-fu-P6m"/>
                     </connections>
                 </application>
-                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Cleartext" customModuleProvider="target">
-                    <connections>
-                        <outlet property="languageMenu" destination="tWE-i4-IRS" id="AJF-M6-0Nc"/>
-                    </connections>
-                </customObject>
+                <customObject id="Voe-Tx-rLC" customClass="AppDelegate" customModule="Cleartext" customModuleProvider="target"/>
                 <customObject id="Ady-hI-5gd" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
                 <userDefaultsController representsSharedInstance="YES" id="y4Y-3J-iBV"/>
             </objects>

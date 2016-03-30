@@ -51,7 +51,7 @@ class SimplerTextView: NSTextView, SimplerTextStorageDelegate {
     }
     
     func simplerTextStorageShouldChangeAtts(atts: [String : AnyObject]) {
-
+        
     }
     
     override func shouldChangeTextInRange(affectedCharRange: NSRange, replacementString: String?) -> Bool {
