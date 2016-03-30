@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		544B6C991CAC627C00EB5295 /* pt.txt in Resources */ = {isa = PBXBuildFile; fileRef = 544B6C981CAC627C00EB5295 /* pt.txt */; };
 		5B85A9B31C11B6AE000EC95B /* nl.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5B85A9B21C11B6AE000EC95B /* nl.txt */; };
 		C82978611CAA337E00839628 /* Trump.txt in Resources */ = {isa = PBXBuildFile; fileRef = C82978601CAA337E00839628 /* Trump.txt */; };
 		C84079D71C06F153002EC6D4 /* da.txt in Resources */ = {isa = PBXBuildFile; fileRef = C84079D61C06F153002EC6D4 /* da.txt */; };
@@ -28,6 +29,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		544B6C981CAC627C00EB5295 /* pt.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pt.txt; sourceTree = "<group>"; };
 		5B85A9B21C11B6AE000EC95B /* nl.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nl.txt; sourceTree = "<group>"; };
 		C82978601CAA337E00839628 /* Trump.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Trump.txt; sourceTree = "<group>"; };
 		C84079D61C06F153002EC6D4 /* da.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = da.txt; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		C84079D81C0786FA002EC6D4 /* dictionaries */ = {
 			isa = PBXGroup;
 			children = (
+				544B6C981CAC627C00EB5295 /* pt.txt */,
 				C82978601CAA337E00839628 /* Trump.txt */,
 				C8A42ABF1C0C306B00ECED04 /* hemingway.txt */,
 				C84079DE1C083EC6002EC6D4 /* jobs.txt */,
@@ -169,6 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				544B6C991CAC627C00EB5295 /* pt.txt in Resources */,
 				C86C6F451C01A5EF00A21B0A /* Assets.xcassets in Resources */,
 				C86C6F541C01AFA700A21B0A /* en.txt in Resources */,
 				5B85A9B31C11B6AE000EC95B /* nl.txt in Resources */,
