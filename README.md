@@ -16,8 +16,7 @@ Trained with a few of Trump's best known speeches, the app is now ready to help 
 <img src="https://github.com/mortenjust/cleartext-mac/blob/master/UX/trumpdemo.gif?raw=true">
 
 
-<iframe width="420" height="315" src="https://www.youtube.com/embed/Ac7G7xOG2Ag" frameborder="0" allowfullscreen></iframe>
-
+* <a href="https://medium.com/@mortenjust/i-doomed-mankind-with-a-free-text-editor-ba6003319681">Medium: I doomed mankind with a free text editor</a>
 * <a href="https://github.com/first20hours/google-10000-english">Google top 10,000 words</a>
 * <a href="https://xkcd.com/thing-explainer/">Randall Monroe: Thing Explainer</a>
 * <a href="http://www.newyorker.com/tech/elements/the-space-doctors-big-idea-einstein-general-relativity">The Space Doctor's Big Idea</a>
@@ -28,3 +27,4 @@ As seen on
 * The Telegraph: <a href="http://www.telegraph.co.uk/technology/2016/03/27/the-1000-most-used-words-in-english--in-one-genius-app/">The 1,000 most used words in English – in one genius app</a>
 * <a href="https://www.producthunt.com/tech/cleartext-2">Product Hunt</a>
 * OSX Daily: <a href="http://osxdaily.com/2016/03/27/simple-language-text-editor-mac-cleartext/">Write Like a Politician with Simple Language Editor for Mac</a>
+*
