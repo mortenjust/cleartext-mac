@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B85A9B31C11B6AE000EC95B /* nl.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5B85A9B21C11B6AE000EC95B /* nl.txt */; };
+		84ED7C731CAA9D5F006732DD /* fr.txt in Resources */ = {isa = PBXBuildFile; fileRef = 84ED7C721CAA9D5F006732DD /* fr.txt */; };
 		C82978611CAA337E00839628 /* Trump.txt in Resources */ = {isa = PBXBuildFile; fileRef = C82978601CAA337E00839628 /* Trump.txt */; };
 		C84079D71C06F153002EC6D4 /* da.txt in Resources */ = {isa = PBXBuildFile; fileRef = C84079D61C06F153002EC6D4 /* da.txt */; };
 		C84079DA1C07E422002EC6D4 /* LanguagePopupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84079D91C07E422002EC6D4 /* LanguagePopupButton.swift */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		5B85A9B21C11B6AE000EC95B /* nl.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nl.txt; sourceTree = "<group>"; };
+		84ED7C721CAA9D5F006732DD /* fr.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fr.txt; sourceTree = "<group>"; };
 		C82978601CAA337E00839628 /* Trump.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Trump.txt; sourceTree = "<group>"; };
 		C84079D61C06F153002EC6D4 /* da.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = da.txt; sourceTree = "<group>"; };
 		C84079D91C07E422002EC6D4 /* LanguagePopupButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagePopupButton.swift; sourceTree = "<group>"; };
@@ -64,6 +66,7 @@
 		C84079D81C0786FA002EC6D4 /* dictionaries */ = {
 			isa = PBXGroup;
 			children = (
+				84ED7C721CAA9D5F006732DD /* fr.txt */,
 				C82978601CAA337E00839628 /* Trump.txt */,
 				C8A42ABF1C0C306B00ECED04 /* hemingway.txt */,
 				C84079DE1C083EC6002EC6D4 /* jobs.txt */,
@@ -169,6 +172,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84ED7C731CAA9D5F006732DD /* fr.txt in Resources */,
 				C86C6F451C01A5EF00A21B0A /* Assets.xcassets in Resources */,
 				C86C6F541C01AFA700A21B0A /* en.txt in Resources */,
 				5B85A9B31C11B6AE000EC95B /* nl.txt in Resources */,

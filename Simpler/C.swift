@@ -39,6 +39,7 @@ class C: NSObject {
         Language(code: "Trump", name: "Trump"),
         Language(code: "da", name: "da"),
         Language(code: "nl", name: "nl"),
+        Language(code: "fr", name: "fr"),
         Language(code: "xkcd", name: "xkcd"),
         Language(code: "xkcd", name: "xkcd"),
         Language(code: "jobs", name: "jobs"),
