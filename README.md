@@ -29,3 +29,4 @@ More
 * The Telegraph: <a href="http://www.telegraph.co.uk/technology/2016/03/27/the-1000-most-used-words-in-english--in-one-genius-app/">The 1,000 most used words in English – in one genius app</a>
 * <a href="https://www.producthunt.com/tech/cleartext-2">Product Hunt</a>
 * OSX Daily: <a href="http://osxdaily.com/2016/03/27/simple-language-text-editor-mac-cleartext/">Write Like a Politician with Simple Language Editor for Mac</a>
+* Mashable: <a href="http://mashable.com/2016/03/31/cleartext-typing-app/">Cleartext only lets you write with the 1,000 most common words</a>
