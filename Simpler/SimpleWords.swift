@@ -11,6 +11,7 @@ import Cocoa
 class SimpleWords: NSObject {
     var allWords = [String]()
     var languageCode = "en"
+    static let sharedInstance = SimpleWords()
     
     func getArray(){
         if allWords.count < 1 {
@@ -34,7 +35,7 @@ class SimpleWords: NSObject {
     }
     
     func isSimpleWord(word:String) -> Bool {
-        print("checking \(word)")
+//        print("checking \(word)")
         
         // simple check first: One-letter words, numbers, contractions, go!
         if word.characters.count == 1 { return true }
@@ -44,7 +45,7 @@ class SimpleWords: NSObject {
             return true
         }
         
-        print("not simple, using dictionary")
+//        print("not simple, using dictionary")
         
         getArray()
         
@@ -53,8 +54,6 @@ class SimpleWords: NSObject {
         }
         
         return false
-        
-
     }
     
     func readWordsForLanguage(languageCode:String = "en"){
@@ -71,4 +70,6 @@ class SimpleWords: NSObject {
             return
         }
     }
+    
+    
 }

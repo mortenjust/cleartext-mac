@@ -45,7 +45,9 @@ class ViewController: NSViewController, SimplerTextViewDelegate {
         super.viewDidLoad()
         editor.simplerDelegate = self
         showLanguageBackdrop()
+
     }
+    
     
     func showTrump(){
         trumpSealImageView.alphaValue = 0.6
