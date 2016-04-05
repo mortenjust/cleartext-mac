@@ -16,46 +16,39 @@ class LanguagePopupButton: NSPopUpButton {
     }
     
     override func mouseUp(theEvent: NSEvent) {
+        super.moveUp(theEvent)
         Swift.print("mouse is up")
     }
     
     override func didCloseMenu(menu: NSMenu, withEvent event: NSEvent?) {
         styleItems()
     }
-    
-    func setup(){
-        self.wantsLayer = true
+
+    private func setup() {
+        wantsLayer = true
         populateItems()
         styleItems()
         style()
     }
-    
-    func style(){
+
+    private func style() {
         layer?.backgroundColor = NSColor(red:0.902, green:0.902, blue:0.902, alpha:0.5).CGColor
     }
-    
-    func populateItems(){
+
+    private func populateItems() {
         for l in C.languages {
-            self.addItemWithTitle(l.name)
+            addItemWithTitle(l.name)
         }
     }
-    
-    func styleItems(){
+
+    private func styleItems() {
         let menuAttributes = [
             NSForegroundColorAttributeName : C.languageItemColor
         ]
-        
-        for item in self.itemArray {
-            let s = NSMutableAttributedString(string: item.title, attributes: menuAttributes)
-            item.attributedTitle = s
+
+        for item in itemArray {
+            item.attributedTitle = NSAttributedString(string: item.title, attributes: menuAttributes)
         }
     }
 
-    override func drawRect(dirtyRect: NSRect) {
-        super.drawRect(dirtyRect)
-
-        // Drawing code here.
-    }
-
-    
 }

@@ -1,4 +1,4 @@
- //
+//
 //  SimpleWords.swift
 //  Simpler
 //
@@ -9,34 +9,34 @@
 import Cocoa
 
 class SimpleWords: NSObject {
-    var allWords = [String]()
-    var languageCode = "English"
+    private var allWords = [String]()
+    private var languageCode = "English"
     static let sharedInstance = SimpleWords()
-    
-    func getArray(){
+
+    private func getArray() {
         if allWords.count < 1 {
-         loadDictionaryFromPrefs()
+            loadDictionaryFromPrefs()
         }
     }
 
-    func loadDictionaryForCode(code:String){
+    func loadDictionaryForCode(code: String) {
         readWordsForLanguage(code)
     }
-    
-    func loadDictionaryFromPrefs(){
+
+    private func loadDictionaryFromPrefs() {
         if let languageCode = NSUserDefaults.standardUserDefaults().stringForKey("language") {
             print("reading words for \(languageCode)")
             readWordsForLanguage(languageCode)
         }
     }
-    
-    func getFilenameForLanguageCode(languageCode:String) -> String {
+
+    private func getFilenameForLanguageCode(languageCode: String) -> String {
         return "\(languageCode).txt" // if we decide to show a more human readable name, this func will be the place
     }
-    
-    func isSimpleWord(word:String) -> Bool {
-//        print("checking \(word)")
-        
+
+    func isSimpleWord(word: String) -> Bool {
+        // print("checking \(word)")
+
         // simple check first: One-letter words, numbers, contractions, go!
         if word.characters.count == 1 { return true }
         if word.characters.contains("'") { return true }
@@ -44,21 +44,19 @@ class SimpleWords: NSObject {
         if digits.longCharacterIsMember((word.unicodeScalars.first?.value)!) {
             return true
         }
-        if String(word.characters.first!).rangeOfCharacterFromSet(NSCharacterSet.uppercaseLetterCharacterSet()) != nil
-        {return true}
-        
-//        print("not simple, using dictionary")
-        
-        getArray()
-        
-        if allWords.contains(word.lowercaseString) {
+
+        if String(word.characters.first!).rangeOfCharacterFromSet(NSCharacterSet.uppercaseLetterCharacterSet()) != nil {
             return true
         }
-        
-        return false
+
+        // print("not simple, using dictionary")
+
+        getArray()
+
+        return allWords.contains(word.lowercaseString)
     }
-    
-    func readWordsForLanguage(languageCode:String = "English"){
+
+    private func readWordsForLanguage(languageCode: String = "English") {
         print("loading file for \(languageCode)")
         self.languageCode = languageCode
         let fileName = getFilenameForLanguageCode(languageCode)
@@ -66,12 +64,11 @@ class SimpleWords: NSObject {
         let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "")!
         do {
             let text = try NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding)
-            self.allWords = text.componentsSeparatedByString("\n")
+            allWords = text.componentsSeparatedByString("\n")
         } catch {
             print("read didn't work")
             return
         }
     }
-    
-    
+
 }

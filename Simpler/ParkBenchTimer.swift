@@ -9,25 +9,24 @@
 import CoreFoundation
 
 class ParkBenchTimer {
-    
-    let startTime:CFAbsoluteTime
-    var endTime:CFAbsoluteTime?
-    
+
+    private let startTime: CFAbsoluteTime
+    private var endTime: CFAbsoluteTime?
+
     init() {
         startTime = CFAbsoluteTimeGetCurrent()
     }
     
     func stop() -> CFAbsoluteTime {
         endTime = CFAbsoluteTimeGetCurrent()
-        
-        return duration!
+        return duration
     }
-    
-    var duration:CFAbsoluteTime? {
+
+    var duration: CFAbsoluteTime {
         if let endTime = endTime {
             return endTime - startTime
         } else {
-            return nil
+            return CFAbsoluteTimeGetCurrent() - startTime
         }
     }
 }

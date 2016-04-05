@@ -7,21 +7,18 @@
 //
 
 import Cocoa
-import Quartz
 
 protocol SimplerTextViewDelegate {
-    func simplerTextViewKeyUp(character:String)
     func simplerTextViewGotComplexWord()
 }
 
 class SimplerTextView: NSTextView, SimplerTextStorageDelegate {
-    var simplerDelegate:SimplerTextViewDelegate!
-    var simplerStorage: SimplerTextStorage!
-    
+    var simplerDelegate: SimplerTextViewDelegate?
+    let simplerStorage = SimplerTextStorage()
+
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         wantsLayer = true
-        simplerStorage = SimplerTextStorage()
         simplerStorage.simpleDelegate = self
         simplerStorage.addLayoutManager(layoutManager!)
         layoutManager?.replaceTextStorage(simplerStorage)
@@ -29,52 +26,29 @@ class SimplerTextView: NSTextView, SimplerTextStorageDelegate {
         resetFormatting()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SimplerTextView.selectionDidChange(_:)), name: NSTextViewDidChangeSelectionNotification, object: nil)
     }
-    
-    func selectionDidChange(n:NSNotification){
-//        Swift.print("view:selectiondidchange")
-//        Swift.print("---inwhich the selected range is \(self.selectedRange())")
-         simplerStorage.selectionDidChange(self.selectedRange())
+
+    func selectionDidChange(n: NSNotification) {
+        // Swift.print("view:selectiondidchange")
+        // Swift.print("---inwhich the selected range is \(selectedRange())")
+        simplerStorage.selectionDidChange(selectedRange())
     }
 
     func simplerTextStorageGotComplexWord() {
-        simplerDelegate.simplerTextViewGotComplexWord()
+        simplerDelegate?.simplerTextViewGotComplexWord()
+    }
 
-    }
-    
-    
-    func simplerTextStorageGotComplexWordAtRange(range:NSRange) {
-        simplerDelegate.simplerTextViewGotComplexWord()
-        
-        if(NSUserDefaults.standardUserDefaults().boolForKey(C.PREF_FORCESELECT)){
+    func simplerTextStorageGotComplexWordAtRange(range: NSRange) {
+        simplerDelegate?.simplerTextViewGotComplexWord()
+
+        if NSUserDefaults.standardUserDefaults().boolForKey(C.PREF_FORCESELECT) {
             setSelectedRange(range)
-            }
+        }
     }
-    
-    func simplerTextStorageShouldChangeAtts(atts: [String : AnyObject]) {
-        
-    }
-    
-    override func shouldChangeTextInRange(affectedCharRange: NSRange, replacementString: String?) -> Bool {
-        return true
-    }
-    
-    override func shouldChangeTextInRanges(affectedRanges: [NSValue], replacementStrings: [String]?) -> Bool {
-        return true
-    }
-    
-    func resetFormatting(){
+
+    private func resetFormatting() {
         font = C.editorFont
         backgroundColor = C.editorBackgroundColor
         textColor = C.editorTextColor
     }
-    
-    override func didChangeText() {
-        super.didChangeText()
-        
-    }
-    
-    override func drawRect(dirtyRect: NSRect) {
-        super.drawRect(dirtyRect)
-        // Drawing code here.
-    }
+
 }

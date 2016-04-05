@@ -9,8 +9,8 @@
 import Cocoa
 
 struct Language {
-    var code:String
-    var name:String
+    var code: String
+    var name: String
 }
 
 class C: NSObject {
@@ -19,19 +19,19 @@ class C: NSObject {
     static let canvasBackgroundColor = NSColor(red:0.988, green:0.988, blue:0.980, alpha:1)
     static let languageItemColor = NSColor(red:0.745, green:0.741, blue:0.749, alpha:1)
     static let editorFont = NSFont(name: "Avenir Next", size: 23)
-    
-    static let editorAtts:[String:AnyObject] = [
-        NSFontNameAttribute : C.editorFont!,
-        NSForegroundColorAttributeName : C.editorTextColor,
-        NSBackgroundColorAttributeName : C.editorBackgroundColor
+
+    static let editorAtts: [String:AnyObject] = [
+        NSFontNameAttribute: C.editorFont!,
+        NSForegroundColorAttributeName: C.editorTextColor,
+        NSBackgroundColorAttributeName: C.editorBackgroundColor
     ]
 
     static let PREF_MAKESOUND = "makeSound"
     static let PREF_FORCESELECT = "forceSelect"
     static let defaultPrefValues = [
-        "makeSound":true,
-        "forceSelect":true,
-        "language":"English"
+        "makeSound": true,
+        "forceSelect": true,
+        "language": "English"
     ]
 
     static let languages = [
@@ -59,12 +59,5 @@ class C: NSObject {
         Language(code: "jobs", name: "jobs"),
         Language(code: "hemingway", name: "hemingway"),        
     ]
-    
-    
-//    
-//    font = NSFont(name: "Avenir Next", size: 23)
-//    backgroundColor = C.editorBackgroundColor
-//    textColor = C.editorTextColor
-//    
-    
+
 }
