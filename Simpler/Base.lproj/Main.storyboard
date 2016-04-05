@@ -722,7 +722,7 @@
                                 <rect key="frame" x="410" y="10" width="70" height="21"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="21" id="AJk-M3-bDl"/>
-                                    <constraint firstAttribute="width" constant="70" id="jDy-1F-a9t"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="70" id="jDy-1F-a9t"/>
                                 </constraints>
                                 <popUpButtonCell key="cell" type="bevel" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" imageScaling="proportionallyDown" inset="2" arrowPosition="noArrow" preferredEdge="maxY" id="bxw-s5-ry5">
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
