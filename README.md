@@ -1,6 +1,7 @@
 # Cleartext
 
 ### <a href="https://github.com/mortenjust/cleartext-mac/releases">Download for Mac 10.11+</a>
+Follow <a href="http://twitter.com/mortenjust">@mortenjust</a> on Twitter for updates. 
 
 ### What's this?
 A text editor that only allows the 1,000 most common words in English
