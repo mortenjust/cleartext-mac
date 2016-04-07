@@ -344,6 +344,7 @@ ijs
 ijzer
 ik
 in
+is
 instrument
 ja
 jaar
