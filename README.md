@@ -22,6 +22,7 @@ Follow <a href="http://twitter.com/mortenjust">@mortenjust</a> on Twitter for up
 * <a href="https://medium.com/@mortenjust/i-doomed-mankind-with-a-free-text-editor-ba6003319681">Medium: I doomed mankind with a free text editor</a>
 * <a href="https://github.com/first20hours/google-10000-english">Google top 10,000 words</a>
 * <a href="https://xkcd.com/thing-explainer/">Randall Monroe: Thing Explainer</a>
+* <a href="https://xkcd.com/simplewriter/">Simple Writer</a>
 * <a href="http://www.newyorker.com/tech/elements/the-space-doctors-big-idea-einstein-general-relativity">The Space Doctor's Big Idea</a>
 * <a href="https://www.youtube.com/watch?v=Ac7G7xOG2Ag">Turbo Encabulator</a>
 
