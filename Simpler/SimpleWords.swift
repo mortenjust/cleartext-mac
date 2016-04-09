@@ -44,6 +44,8 @@ class SimpleWords: NSObject {
         if digits.longCharacterIsMember((word.unicodeScalars.first?.value)!) {
             return true
         }
+        if String(word.characters.first!).rangeOfCharacterFromSet(NSCharacterSet.uppercaseLetterCharacterSet()) != nil
+        {return true}
         
 //        print("not simple, using dictionary")
         
