@@ -6,7 +6,7 @@ Follow <a href="http://twitter.com/mortenjust">@mortenjust</a> on Twitter for up
 ### What's this?
 A text editor that only allows the 1,000 most common words in English
 
-I just got Randall Monroe's new book <a href="https://xkcd.com/thing-explainer/">Thing Explainer</a>. Only using the top 1,000 words makes the text really easy to read. I thought I would make it easy for people to write like this, so I made this application. It's cool to be clear.
+I just got Randall Munroe's new book <a href="https://xkcd.com/thing-explainer/">Thing Explainer</a>. Only using the top 1,000 words makes the text really easy to read. I thought I would make it easy for people to write like this, so I made this application. It's cool to be clear.
 
 <img src="https://raw.githubusercontent.com/mortenjust/cleartext-mac/master/UX/cleartext.gif">
 
@@ -21,7 +21,7 @@ Follow <a href="http://twitter.com/mortenjust">@mortenjust</a> on Twitter for up
 ## More
 * <a href="https://medium.com/@mortenjust/i-doomed-mankind-with-a-free-text-editor-ba6003319681">Medium: I doomed mankind with a free text editor</a>
 * <a href="https://github.com/first20hours/google-10000-english">Google top 10,000 words</a>
-* <a href="https://xkcd.com/thing-explainer/">Randall Monroe: Thing Explainer</a>
+* <a href="https://xkcd.com/thing-explainer/">Randall Munroe: Thing Explainer</a>
 * <a href="http://www.newyorker.com/tech/elements/the-space-doctors-big-idea-einstein-general-relativity">The Space Doctor's Big Idea</a>
 * <a href="https://www.youtube.com/watch?v=Ac7G7xOG2Ag">Turbo Encabulator</a>
 
