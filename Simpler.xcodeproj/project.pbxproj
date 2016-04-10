@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5B85A9B31C11B6AE000EC95B /* nl.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5B85A9B21C11B6AE000EC95B /* nl.txt */; };
+		5D6CB4621CBA0079006CAB73 /* hodor.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5D6CB4611CBA0079006CAB73 /* hodor.txt */; };
 		65C5495D1CB14AD000B30C56 /* it.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65C5495C1CB14AD000B30C56 /* it.txt */; };
 		C82978611CAA337E00839628 /* Trump.txt in Resources */ = {isa = PBXBuildFile; fileRef = C82978601CAA337E00839628 /* Trump.txt */; };
 		C84079D71C06F153002EC6D4 /* da.txt in Resources */ = {isa = PBXBuildFile; fileRef = C84079D61C06F153002EC6D4 /* da.txt */; };
@@ -30,6 +31,7 @@
 
 /* Begin PBXFileReference section */
 		5B85A9B21C11B6AE000EC95B /* nl.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nl.txt; sourceTree = "<group>"; };
+		5D6CB4611CBA0079006CAB73 /* hodor.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hodor.txt; sourceTree = "<group>"; };
 		65C5495C1CB14AD000B30C56 /* it.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = it.txt; sourceTree = "<group>"; };
 		C82978601CAA337E00839628 /* Trump.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Trump.txt; sourceTree = "<group>"; };
 		C84079D61C06F153002EC6D4 /* da.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = da.txt; sourceTree = "<group>"; };
@@ -74,6 +76,7 @@
 				C84079DB1C07FABE002EC6D4 /* xkcd.txt */,
 				C86C6F531C01AFA700A21B0A /* en.txt */,
 				C84079D61C06F153002EC6D4 /* da.txt */,
+				5D6CB4611CBA0079006CAB73 /* hodor.txt */,
 			);
 			name = dictionaries;
 			sourceTree = "<group>";
@@ -178,6 +181,7 @@
 				C86C6F481C01A5EF00A21B0A /* Main.storyboard in Resources */,
 				C84079D71C06F153002EC6D4 /* da.txt in Resources */,
 				65C5495D1CB14AD000B30C56 /* it.txt in Resources */,
+				5D6CB4621CBA0079006CAB73 /* hodor.txt in Resources */,
 				C8A42AC01C0C306B00ECED04 /* hemingway.txt in Resources */,
 				C84079DF1C083EC6002EC6D4 /* jobs.txt in Resources */,
 				C84079DC1C07FABE002EC6D4 /* xkcd.txt in Resources */,
