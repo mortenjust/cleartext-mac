@@ -31,19 +31,30 @@ class C: NSObject {
     static let defaultPrefValues = [
         "makeSound":true,
         "forceSelect":true,
-        "language":"en"
+        "language":"English"
     ]
 
     static let languages = [
-        Language(code: "en", name: "en"),
+        Language(code: "English", name: "English"),
+        Language(code: "Español (Spanish)", name: "Español (Spanish)"),
+        Language(code: "Français (French)", name: "Français (French)"),
+        Language(code: "Português (Portuguese)", name: "Português (Portuguese)"),
+        Language(code: "Deutsch (German)", name: "Deutsch (German)"),
+        Language(code: "Italiano (Italian)", name: "Italiano (Italian)"),
+        Language(code: "Nederlands (Dutch)", name: "Nederlands (Dutch)"),
+        Language(code: "Dansk (Danish)", name: "Dansk (Danish)"),
+        Language(code: "Suomi (Finnish)", name: "Suomi (Finnish)"),
+        Language(code: "Svenska (Swedish)", name: "Svenska (Swedish)"),
+        Language(code: "Íslenska (Icelandic)", name: "Íslenska (Icelandic)"),
+        Language(code: "Čeština (Czech)", name: "Čeština (Czech)"),
+        Language(code: "Shqip (Albanian)", name: "Shqip (Albanian)"),
+        Language(code: "Hrvatski (Croatian)", name: "Hrvatski (Croatian)"),
+        Language(code: "Srpski (Serbian)", name: "Srpski (Serbian)"),
+        Language(code: "Bahasa (Indonesian)", name: "Bahasa (Indonesian)"),
         Language(code: "Trump", name: "Trump"),
-        Language(code: "da", name: "da"),
-        Language(code: "nl", name: "nl"),
         Language(code: "xkcd", name: "xkcd"),
-        Language(code: "xkcd", name: "xkcd"),
-        Language(code: "jobs", name: "jobs"),
-        Language(code: "hemingway", name: "hemingway"),
-        Language(code: "it", name: "it")
+        Language(code: "Jobs", name: "Jobs"),
+        Language(code: "Hemingway", name: "Hemingway"),
     ]
     
     

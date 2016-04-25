@@ -10,7 +10,7 @@ import Cocoa
 
 class SimpleWords: NSObject {
     var allWords = [String]()
-    var languageCode = "en"
+    var languageCode = "English"
     static let sharedInstance = SimpleWords()
     
     func getArray(){
@@ -56,7 +56,7 @@ class SimpleWords: NSObject {
         return false
     }
     
-    func readWordsForLanguage(languageCode:String = "en"){
+    func readWordsForLanguage(languageCode:String = "English"){
         print("loading file for \(languageCode)")
         self.languageCode = languageCode
         let fileName = getFilenameForLanguageCode(languageCode)
