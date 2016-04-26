@@ -34,6 +34,29 @@ class SimpleWords: NSObject {
         return "\(languageCode).txt" // if we decide to show a more human readable name, this func will be the place
     }
     
+      //removes all letters and then checks if there is anything left, if there is, it implies that there is a character that should not be there
+    // other than ' 
+    // ~GenDium
+    func checkForInvalidCharacters(word: String) -> Bool {
+        var i = 0
+        var check = 'a'
+        let aString: String = word
+        var newString: String = ""
+        while i < 26{//iterates through the letters
+            let newString = aString.stringByReplacingOccurencesOfString(check, withString: "",  options: NSStringCompareOptions.LiteralSearch, range: nil)
+            let aString = newString
+            let check++
+        }
+        // delete the '
+        let newString = aString.stringByReplacingOccurencesOfString("'", withString: "",  options: NSStringCompareOptions.LiteralSearch, range: nil)
+        let aString = newString
+        
+        if aString.isEmpty{ return true }
+        else { 
+             return false 
+             }
+    }
+    
     func isSimpleWord(word:String) -> Bool {
 //        print("checking \(word)")
         
@@ -44,6 +67,7 @@ class SimpleWords: NSObject {
         if digits.longCharacterIsMember((word.unicodeScalars.first?.value)!) {
             return true
         }
+        if checkForInvalidCharacters(word) { return true}
         
 //        print("not simple, using dictionary")
         
