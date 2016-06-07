@@ -37,6 +37,7 @@ class C: NSObject {
     static let languages = [
         Language(code: "English", name: "English"),
         Language(code: "Español", name: "Español"),
+        Language(code: "Čeština", name: "Čeština"),
         Language(code: "Français", name: "Français"),
         Language(code: "Português", name: "Português"),
         Language(code: "Deutsch", name: "Deutsch"),
@@ -46,15 +47,16 @@ class C: NSObject {
         Language(code: "Suomi", name: "Suomi"),
         Language(code: "Svenska", name: "Svenska"),
         Language(code: "Íslenska", name: "Íslenska"),
-        Language(code: "Čeština", name: "Čeština"),
+        Language(code: "Italiano", name: "Italiano"),
         Language(code: "Shqip", name: "Shqip"),
         Language(code: "Hrvatski", name: "Hrvatski"),
         Language(code: "Srpski", name: "Srpski"),
         Language(code: "Bahasa", name: "Bahasa"),
+        Language(code: "русский", name: "русский"),
         Language(code: "Trump", name: "Trump"),
         Language(code: "xkcd", name: "xkcd"),
-        Language(code: "Jobs", name: "Jobs"),
-        Language(code: "Hemingway", name: "Hemingway"),
+        Language(code: "jobs", name: "jobs"),
+        Language(code: "hemingway", name: "hemingway"),        
     ]
     
     
