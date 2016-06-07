@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C802EE4C1D077599001DD9E3 /* русский.txt in Resources */ = {isa = PBXBuildFile; fileRef = C802EE4B1D077599001DD9E3 /* русский.txt */; };
 		C82978611CAA337E00839628 /* Trump.txt in Resources */ = {isa = PBXBuildFile; fileRef = C82978601CAA337E00839628 /* Trump.txt */; };
 		C84079DA1C07E422002EC6D4 /* LanguagePopupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84079D91C07E422002EC6D4 /* LanguagePopupButton.swift */; };
 		C84079DC1C07FABE002EC6D4 /* xkcd.txt in Resources */ = {isa = PBXBuildFile; fileRef = C84079DB1C07FABE002EC6D4 /* xkcd.txt */; };
@@ -41,6 +42,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C802EE4B1D077599001DD9E3 /* русский.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "русский.txt"; sourceTree = "<group>"; };
 		C82978601CAA337E00839628 /* Trump.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Trump.txt; sourceTree = "<group>"; };
 		C84079D91C07E422002EC6D4 /* LanguagePopupButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagePopupButton.swift; sourceTree = "<group>"; };
 		C84079DB1C07FABE002EC6D4 /* xkcd.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = xkcd.txt; sourceTree = "<group>"; };
@@ -90,6 +92,7 @@
 		C84079D81C0786FA002EC6D4 /* dictionaries */ = {
 			isa = PBXGroup;
 			children = (
+				C802EE4B1D077599001DD9E3 /* русский.txt */,
 				FF3187B01CCEC611003E294A /* Português.txt */,
 				FF3187AC1CCEC455003E294A /* Svenska.txt */,
 				FF3187AA1CCEC294003E294A /* Srpski.txt */,
@@ -228,6 +231,7 @@
 				C82978611CAA337E00839628 /* Trump.txt in Resources */,
 				FF31879F1CCEBD01003E294A /* Suomi.txt in Resources */,
 				FF3187A41CCEBE6B003E294A /* Bahasa.txt in Resources */,
+				C802EE4C1D077599001DD9E3 /* русский.txt in Resources */,
 				FF31879B1CCEBC5B003E294A /* Deutsch.txt in Resources */,
 				FF3187A51CCEBE6B003E294A /* Čeština.txt in Resources */,
 			);
