@@ -31,19 +31,30 @@ class C: NSObject {
     static let defaultPrefValues = [
         "makeSound":true,
         "forceSelect":true,
-        "language":"en"
+        "language":"English"
     ]
 
     static let languages = [
-        Language(code: "en", name: "en"),
+        Language(code: "English", name: "English"),
+        Language(code: "Español", name: "Español"),
+        Language(code: "Français", name: "Français"),
+        Language(code: "Português", name: "Português"),
+        Language(code: "Deutsch", name: "Deutsch"),
+        Language(code: "Italiano", name: "Italiano"),
+        Language(code: "Nederlands", name: "Nederlands"),
+        Language(code: "Dansk", name: "Dansk"),
+        Language(code: "Suomi", name: "Suomi"),
+        Language(code: "Svenska", name: "Svenska"),
+        Language(code: "Íslenska", name: "Íslenska"),
+        Language(code: "Čeština", name: "Čeština"),
+        Language(code: "Shqip", name: "Shqip"),
+        Language(code: "Hrvatski", name: "Hrvatski"),
+        Language(code: "Srpski", name: "Srpski"),
+        Language(code: "Bahasa", name: "Bahasa"),
         Language(code: "Trump", name: "Trump"),
-        Language(code: "da", name: "da"),
-        Language(code: "nl", name: "nl"),
         Language(code: "xkcd", name: "xkcd"),
-        Language(code: "xkcd", name: "xkcd"),
-        Language(code: "jobs", name: "jobs"),
-        Language(code: "hemingway", name: "hemingway"),
-        Language(code: "it", name: "it")
+        Language(code: "Jobs", name: "Jobs"),
+        Language(code: "Hemingway", name: "Hemingway"),
     ]
     
     
