@@ -7,13 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5B85A9B31C11B6AE000EC95B /* nl.txt in Resources */ = {isa = PBXBuildFile; fileRef = 5B85A9B21C11B6AE000EC95B /* nl.txt */; };
-		65C5495D1CB14AD000B30C56 /* it.txt in Resources */ = {isa = PBXBuildFile; fileRef = 65C5495C1CB14AD000B30C56 /* it.txt */; };
 		C82978611CAA337E00839628 /* Trump.txt in Resources */ = {isa = PBXBuildFile; fileRef = C82978601CAA337E00839628 /* Trump.txt */; };
-		C84079D71C06F153002EC6D4 /* da.txt in Resources */ = {isa = PBXBuildFile; fileRef = C84079D61C06F153002EC6D4 /* da.txt */; };
 		C84079DA1C07E422002EC6D4 /* LanguagePopupButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84079D91C07E422002EC6D4 /* LanguagePopupButton.swift */; };
 		C84079DC1C07FABE002EC6D4 /* xkcd.txt in Resources */ = {isa = PBXBuildFile; fileRef = C84079DB1C07FABE002EC6D4 /* xkcd.txt */; };
-		C84079DF1C083EC6002EC6D4 /* jobs.txt in Resources */ = {isa = PBXBuildFile; fileRef = C84079DE1C083EC6002EC6D4 /* jobs.txt */; };
 		C84079E11C0BBE5B002EC6D4 /* SimplerTextStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = C84079E01C0BBE5B002EC6D4 /* SimplerTextStorage.swift */; };
 		C86C15F51C13656F00E22CEC /* ParkBenchTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C15F41C13656F00E22CEC /* ParkBenchTimer.swift */; };
 		C86C6F3F1C01A5EF00A21B0A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C6F3E1C01A5EF00A21B0A /* AppDelegate.swift */; };
@@ -23,19 +19,31 @@
 		C86C6F481C01A5EF00A21B0A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C86C6F461C01A5EF00A21B0A /* Main.storyboard */; };
 		C86C6F501C01AAE600A21B0A /* SimplerTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C6F4F1C01AAE600A21B0A /* SimplerTextView.swift */; };
 		C86C6F521C01AF7E00A21B0A /* SimpleWords.swift in Sources */ = {isa = PBXBuildFile; fileRef = C86C6F511C01AF7E00A21B0A /* SimpleWords.swift */; };
-		C86C6F541C01AFA700A21B0A /* en.txt in Resources */ = {isa = PBXBuildFile; fileRef = C86C6F531C01AFA700A21B0A /* en.txt */; };
-		C8A42AC01C0C306B00ECED04 /* hemingway.txt in Resources */ = {isa = PBXBuildFile; fileRef = C8A42ABF1C0C306B00ECED04 /* hemingway.txt */; };
 		C8B24E371C030F4200FF0FDA /* C.swift in Sources */ = {isa = PBXBuildFile; fileRef = C8B24E361C030F4200FF0FDA /* C.swift */; };
+		FF3187811CCEAA69003E294A /* English.txt in Resources */ = {isa = PBXBuildFile; fileRef = FF3187801CCEAA69003E294A /* English.txt */; };
+		FF3187861CCEAC79003E294A /* Hemingway.txt in Resources */ = {isa = PBXBuildFile; fileRef = FF3187821CCEAC79003E294A /* Hemingway.txt */; };
+		FF3187871CCEAC79003E294A /* Italiano (Italian).txt in Resources */ = {isa = PBXBuildFile; fileRef = FF3187831CCEAC79003E294A /* Italiano (Italian).txt */; };
+		FF3187881CCEAC79003E294A /* Jobs.txt in Resources */ = {isa = PBXBuildFile; fileRef = FF3187841CCEAC79003E294A /* Jobs.txt */; };
+		FF3187891CCEAC79003E294A /* Nederlands (Dutch).txt in Resources */ = {isa = PBXBuildFile; fileRef = FF3187851CCEAC79003E294A /* Nederlands (Dutch).txt */; };
+		FF31878B1CCEACD0003E294A /* Español (Spanish).txt in Resources */ = {isa = PBXBuildFile; fileRef = FF31878A1CCEACD0003E294A /* Español (Spanish).txt */; };
+		FF31878D1CCEAD68003E294A /* Français (French).txt in Resources */ = {isa = PBXBuildFile; fileRef = FF31878C1CCEAD68003E294A /* Français (French).txt */; };
+		FF3187921CCEB001003E294A /* Dansk (Danish).txt in Resources */ = {isa = PBXBuildFile; fileRef = FF31878F1CCEB001003E294A /* Dansk (Danish).txt */; };
+		FF31879B1CCEBC5B003E294A /* Deutsch (German).txt in Resources */ = {isa = PBXBuildFile; fileRef = FF31879A1CCEBC5B003E294A /* Deutsch (German).txt */; };
+		FF31879F1CCEBD01003E294A /* Suomi (Finnish).txt in Resources */ = {isa = PBXBuildFile; fileRef = FF31879E1CCEBD01003E294A /* Suomi (Finnish).txt */; };
+		FF3187A11CCEBD87003E294A /* Íslenska (Icelandic).txt in Resources */ = {isa = PBXBuildFile; fileRef = FF3187A01CCEBD87003E294A /* Íslenska (Icelandic).txt */; };
+		FF3187A41CCEBE6B003E294A /* Bahasa (Indonesian).txt in Resources */ = {isa = PBXBuildFile; fileRef = FF3187A21CCEBE6B003E294A /* Bahasa (Indonesian).txt */; };
+		FF3187A51CCEBE6B003E294A /* Čeština (Czech).txt in Resources */ = {isa = PBXBuildFile; fileRef = FF3187A31CCEBE6B003E294A /* Čeština (Czech).txt */; };
+		FF3187A71CCEBF6A003E294A /* Shqip (Albanian).txt in Resources */ = {isa = PBXBuildFile; fileRef = FF3187A61CCEBF6A003E294A /* Shqip (Albanian).txt */; };
+		FF3187A91CCEC062003E294A /* Hrvatski (Croatian).txt in Resources */ = {isa = PBXBuildFile; fileRef = FF3187A81CCEC062003E294A /* Hrvatski (Croatian).txt */; };
+		FF3187AB1CCEC294003E294A /* Srpski (Serbian).txt in Resources */ = {isa = PBXBuildFile; fileRef = FF3187AA1CCEC294003E294A /* Srpski (Serbian).txt */; };
+		FF3187AD1CCEC455003E294A /* Svenska (Swedish).txt in Resources */ = {isa = PBXBuildFile; fileRef = FF3187AC1CCEC455003E294A /* Svenska (Swedish).txt */; };
+		FF3187B11CCEC611003E294A /* Português (Portuguese).txt in Resources */ = {isa = PBXBuildFile; fileRef = FF3187B01CCEC611003E294A /* Português (Portuguese).txt */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		5B85A9B21C11B6AE000EC95B /* nl.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = nl.txt; sourceTree = "<group>"; };
-		65C5495C1CB14AD000B30C56 /* it.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = it.txt; sourceTree = "<group>"; };
 		C82978601CAA337E00839628 /* Trump.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Trump.txt; sourceTree = "<group>"; };
-		C84079D61C06F153002EC6D4 /* da.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = da.txt; sourceTree = "<group>"; };
 		C84079D91C07E422002EC6D4 /* LanguagePopupButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LanguagePopupButton.swift; sourceTree = "<group>"; };
 		C84079DB1C07FABE002EC6D4 /* xkcd.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = xkcd.txt; sourceTree = "<group>"; };
-		C84079DE1C083EC6002EC6D4 /* jobs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = jobs.txt; sourceTree = "<group>"; };
 		C84079E01C0BBE5B002EC6D4 /* SimplerTextStorage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplerTextStorage.swift; sourceTree = "<group>"; };
 		C86C15F41C13656F00E22CEC /* ParkBenchTimer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkBenchTimer.swift; sourceTree = "<group>"; };
 		C86C6F3B1C01A5EF00A21B0A /* Cleartext.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Cleartext.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,9 +55,25 @@
 		C86C6F491C01A5EF00A21B0A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C86C6F4F1C01AAE600A21B0A /* SimplerTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimplerTextView.swift; sourceTree = "<group>"; };
 		C86C6F511C01AF7E00A21B0A /* SimpleWords.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SimpleWords.swift; sourceTree = "<group>"; };
-		C86C6F531C01AFA700A21B0A /* en.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = en.txt; sourceTree = "<group>"; };
-		C8A42ABF1C0C306B00ECED04 /* hemingway.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = hemingway.txt; sourceTree = "<group>"; };
 		C8B24E361C030F4200FF0FDA /* C.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = C.swift; sourceTree = "<group>"; };
+		FF3187801CCEAA69003E294A /* English.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = English.txt; sourceTree = "<group>"; };
+		FF3187821CCEAC79003E294A /* Hemingway.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Hemingway.txt; sourceTree = "<group>"; };
+		FF3187831CCEAC79003E294A /* Italiano (Italian).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Italiano (Italian).txt"; sourceTree = "<group>"; };
+		FF3187841CCEAC79003E294A /* Jobs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Jobs.txt; sourceTree = "<group>"; };
+		FF3187851CCEAC79003E294A /* Nederlands (Dutch).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Nederlands (Dutch).txt"; sourceTree = "<group>"; };
+		FF31878A1CCEACD0003E294A /* Español (Spanish).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Español (Spanish).txt"; sourceTree = "<group>"; };
+		FF31878C1CCEAD68003E294A /* Français (French).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Français (French).txt"; sourceTree = "<group>"; };
+		FF31878F1CCEB001003E294A /* Dansk (Danish).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Dansk (Danish).txt"; sourceTree = "<group>"; };
+		FF31879A1CCEBC5B003E294A /* Deutsch (German).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Deutsch (German).txt"; sourceTree = "<group>"; };
+		FF31879E1CCEBD01003E294A /* Suomi (Finnish).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Suomi (Finnish).txt"; sourceTree = "<group>"; };
+		FF3187A01CCEBD87003E294A /* Íslenska (Icelandic).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Íslenska (Icelandic).txt"; sourceTree = "<group>"; };
+		FF3187A21CCEBE6B003E294A /* Bahasa (Indonesian).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Bahasa (Indonesian).txt"; sourceTree = "<group>"; };
+		FF3187A31CCEBE6B003E294A /* Čeština (Czech).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Čeština (Czech).txt"; sourceTree = "<group>"; };
+		FF3187A61CCEBF6A003E294A /* Shqip (Albanian).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Shqip (Albanian).txt"; sourceTree = "<group>"; };
+		FF3187A81CCEC062003E294A /* Hrvatski (Croatian).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Hrvatski (Croatian).txt"; sourceTree = "<group>"; };
+		FF3187AA1CCEC294003E294A /* Srpski (Serbian).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Srpski (Serbian).txt"; sourceTree = "<group>"; };
+		FF3187AC1CCEC455003E294A /* Svenska (Swedish).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Svenska (Swedish).txt"; sourceTree = "<group>"; };
+		FF3187B01CCEC611003E294A /* Português (Portuguese).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Português (Portuguese).txt"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,14 +90,26 @@
 		C84079D81C0786FA002EC6D4 /* dictionaries */ = {
 			isa = PBXGroup;
 			children = (
-				65C5495C1CB14AD000B30C56 /* it.txt */,
+				FF3187B01CCEC611003E294A /* Português (Portuguese).txt */,
+				FF3187AC1CCEC455003E294A /* Svenska (Swedish).txt */,
+				FF3187AA1CCEC294003E294A /* Srpski (Serbian).txt */,
+				FF3187A81CCEC062003E294A /* Hrvatski (Croatian).txt */,
+				FF3187A61CCEBF6A003E294A /* Shqip (Albanian).txt */,
+				FF3187A21CCEBE6B003E294A /* Bahasa (Indonesian).txt */,
+				FF3187A31CCEBE6B003E294A /* Čeština (Czech).txt */,
+				FF3187A01CCEBD87003E294A /* Íslenska (Icelandic).txt */,
+				FF31879E1CCEBD01003E294A /* Suomi (Finnish).txt */,
+				FF31879A1CCEBC5B003E294A /* Deutsch (German).txt */,
+				FF31878F1CCEB001003E294A /* Dansk (Danish).txt */,
+				FF31878C1CCEAD68003E294A /* Français (French).txt */,
+				FF31878A1CCEACD0003E294A /* Español (Spanish).txt */,
+				FF3187821CCEAC79003E294A /* Hemingway.txt */,
+				FF3187831CCEAC79003E294A /* Italiano (Italian).txt */,
+				FF3187841CCEAC79003E294A /* Jobs.txt */,
+				FF3187851CCEAC79003E294A /* Nederlands (Dutch).txt */,
+				FF3187801CCEAA69003E294A /* English.txt */,
 				C82978601CAA337E00839628 /* Trump.txt */,
-				C8A42ABF1C0C306B00ECED04 /* hemingway.txt */,
-				C84079DE1C083EC6002EC6D4 /* jobs.txt */,
-				5B85A9B21C11B6AE000EC95B /* nl.txt */,
 				C84079DB1C07FABE002EC6D4 /* xkcd.txt */,
-				C86C6F531C01AFA700A21B0A /* en.txt */,
-				C84079D61C06F153002EC6D4 /* da.txt */,
 			);
 			name = dictionaries;
 			sourceTree = "<group>";
@@ -172,16 +208,28 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF31878B1CCEACD0003E294A /* Español (Spanish).txt in Resources */,
+				FF3187921CCEB001003E294A /* Dansk (Danish).txt in Resources */,
+				FF31878D1CCEAD68003E294A /* Français (French).txt in Resources */,
+				FF3187A11CCEBD87003E294A /* Íslenska (Icelandic).txt in Resources */,
+				FF3187891CCEAC79003E294A /* Nederlands (Dutch).txt in Resources */,
 				C86C6F451C01A5EF00A21B0A /* Assets.xcassets in Resources */,
-				C86C6F541C01AFA700A21B0A /* en.txt in Resources */,
-				5B85A9B31C11B6AE000EC95B /* nl.txt in Resources */,
+				FF3187811CCEAA69003E294A /* English.txt in Resources */,
+				FF3187B11CCEC611003E294A /* Português (Portuguese).txt in Resources */,
+				FF3187AB1CCEC294003E294A /* Srpski (Serbian).txt in Resources */,
+				FF3187881CCEAC79003E294A /* Jobs.txt in Resources */,
 				C86C6F481C01A5EF00A21B0A /* Main.storyboard in Resources */,
-				C84079D71C06F153002EC6D4 /* da.txt in Resources */,
-				65C5495D1CB14AD000B30C56 /* it.txt in Resources */,
-				C8A42AC01C0C306B00ECED04 /* hemingway.txt in Resources */,
-				C84079DF1C083EC6002EC6D4 /* jobs.txt in Resources */,
+				FF3187A91CCEC062003E294A /* Hrvatski (Croatian).txt in Resources */,
+				FF3187871CCEAC79003E294A /* Italiano (Italian).txt in Resources */,
+				FF3187A71CCEBF6A003E294A /* Shqip (Albanian).txt in Resources */,
+				FF3187AD1CCEC455003E294A /* Svenska (Swedish).txt in Resources */,
+				FF3187861CCEAC79003E294A /* Hemingway.txt in Resources */,
 				C84079DC1C07FABE002EC6D4 /* xkcd.txt in Resources */,
 				C82978611CAA337E00839628 /* Trump.txt in Resources */,
+				FF31879F1CCEBD01003E294A /* Suomi (Finnish).txt in Resources */,
+				FF3187A41CCEBE6B003E294A /* Bahasa (Indonesian).txt in Resources */,
+				FF31879B1CCEBC5B003E294A /* Deutsch (German).txt in Resources */,
+				FF3187A51CCEBE6B003E294A /* Čeština (Czech).txt in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
