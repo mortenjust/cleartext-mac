@@ -19,4 +19,3 @@ func wordAtIndex(index:Int, inString str:NSString) -> NSString {
 
 wordAtIndex(20, inString: str)
 
-

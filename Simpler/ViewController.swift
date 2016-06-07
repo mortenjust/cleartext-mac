@@ -86,8 +86,6 @@ class ViewController: NSViewController, SimplerTextViewDelegate {
     }
     
     func simplerTextViewGotComplexWord() {
-
-        
         
         playBeginAnimation { () -> Void in
             self.playEndAnimation({ () -> Void in })
