@@ -24,7 +24,7 @@
 		FF3187861CCEAC79003E294A /* Hemingway.txt in Resources */ = {isa = PBXBuildFile; fileRef = FF3187821CCEAC79003E294A /* Hemingway.txt */; };
 		FF3187871CCEAC79003E294A /* Italiano.txt in Resources */ = {isa = PBXBuildFile; fileRef = FF3187831CCEAC79003E294A /* Italiano.txt */; };
 		FF3187881CCEAC79003E294A /* Jobs.txt in Resources */ = {isa = PBXBuildFile; fileRef = FF3187841CCEAC79003E294A /* Jobs.txt */; };
-		FF3187891CCEAC79003E294A /* Nederlands (Dutch).txt in Resources */ = {isa = PBXBuildFile; fileRef = FF3187851CCEAC79003E294A /* Nederlands (Dutch).txt */; };
+		FF3187891CCEAC79003E294A /* Nederlands.txt in Resources */ = {isa = PBXBuildFile; fileRef = FF3187851CCEAC79003E294A /* Nederlands.txt */; };
 		FF31878B1CCEACD0003E294A /* Español.txt in Resources */ = {isa = PBXBuildFile; fileRef = FF31878A1CCEACD0003E294A /* Español.txt */; };
 		FF31878D1CCEAD68003E294A /* Français.txt in Resources */ = {isa = PBXBuildFile; fileRef = FF31878C1CCEAD68003E294A /* Français.txt */; };
 		FF3187921CCEB001003E294A /* Dansk.txt in Resources */ = {isa = PBXBuildFile; fileRef = FF31878F1CCEB001003E294A /* Dansk.txt */; };
@@ -60,7 +60,7 @@
 		FF3187821CCEAC79003E294A /* Hemingway.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Hemingway.txt; sourceTree = "<group>"; };
 		FF3187831CCEAC79003E294A /* Italiano.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Italiano.txt; sourceTree = "<group>"; };
 		FF3187841CCEAC79003E294A /* Jobs.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Jobs.txt; sourceTree = "<group>"; };
-		FF3187851CCEAC79003E294A /* Nederlands (Dutch).txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Nederlands (Dutch).txt"; sourceTree = "<group>"; };
+		FF3187851CCEAC79003E294A /* Nederlands.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Nederlands.txt; sourceTree = "<group>"; };
 		FF31878A1CCEACD0003E294A /* Español.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Español.txt"; sourceTree = "<group>"; };
 		FF31878C1CCEAD68003E294A /* Français.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Français.txt"; sourceTree = "<group>"; };
 		FF31878F1CCEB001003E294A /* Dansk.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Dansk.txt; sourceTree = "<group>"; };
@@ -106,7 +106,7 @@
 				FF3187821CCEAC79003E294A /* Hemingway.txt */,
 				FF3187831CCEAC79003E294A /* Italiano.txt */,
 				FF3187841CCEAC79003E294A /* Jobs.txt */,
-				FF3187851CCEAC79003E294A /* Nederlands (Dutch).txt */,
+				FF3187851CCEAC79003E294A /* Nederlands.txt */,
 				FF3187801CCEAA69003E294A /* English.txt */,
 				C82978601CAA337E00839628 /* Trump.txt */,
 				C84079DB1C07FABE002EC6D4 /* xkcd.txt */,
@@ -212,7 +212,7 @@
 				FF3187921CCEB001003E294A /* Dansk.txt in Resources */,
 				FF31878D1CCEAD68003E294A /* Français.txt in Resources */,
 				FF3187A11CCEBD87003E294A /* Íslenska.txt in Resources */,
-				FF3187891CCEAC79003E294A /* Nederlands (Dutch).txt in Resources */,
+				FF3187891CCEAC79003E294A /* Nederlands.txt in Resources */,
 				C86C6F451C01A5EF00A21B0A /* Assets.xcassets in Resources */,
 				FF3187811CCEAA69003E294A /* English.txt in Resources */,
 				FF3187B11CCEC611003E294A /* Português.txt in Resources */,
