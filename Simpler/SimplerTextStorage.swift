@@ -54,7 +54,7 @@ class SimplerTextStorage: NSTextStorage {
                 || token.token == NSLinguisticTagPunctuation)       // check on punctuation like , and .
                 && !word.characters.contains("'") {                 // but not on ' like in it's and don't
                 if currentWord != nil {
-                    performReplacementsForRange(token.range)
+                    performReplacementsForRange(token.range+1)
                 }
             } else {
                 currentWord = (word: word, token.range) // build it!
