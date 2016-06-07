@@ -19,7 +19,6 @@ class SimplerTextStorage: NSTextStorage {
     let checker = SimpleWords()
     var simpleDelegate : SimplerTextStorageDelegate?
 //    var layoutManager : NSLayoutManager!
-    var currentWord : (word:String, range:NSRange)!
     
     override var string: String {
         return backingStore.string
@@ -53,21 +52,18 @@ class SimplerTextStorage: NSTextStorage {
             if (token.token == NSLinguisticTagWhitespace            // check on spaces
                 || token.token == NSLinguisticTagPunctuation)       // check on punctuation like , and .
                 && !word.characters.contains("'") {                 // but not on ' like in it's and don't
-                if currentWord != nil {
                     performReplacementsForRange(token.range)
-                }
-            } else {
-                currentWord = (word: word, token.range) // build it!
             }
         }
     }
     
     func performReplacementsForRange(changedRange: NSRange) {
         let index = changedRange.location-1
-        
-        if let wordRange = wordRangeAtIndex(index, inString: string) {
-            lookForBadWords(wordRange)
+        if index>=0 {
+            if let wordRange = wordRangeAtIndex(index, inString: string) {
+                lookForBadWords(wordRange)
             }
+        }
     }
     
     func substringForRange(range:NSRange) -> String {
