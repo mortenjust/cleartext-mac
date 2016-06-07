@@ -43,6 +43,7 @@ class C: NSObject {
         Language(code: "Deutsch", name: "Deutsch"),
         Language(code: "Italiano", name: "Italiano"),
         Language(code: "Nederlands", name: "Nederlands"),
+        Language(code: "Norsk", name: "Norsk"),
         Language(code: "Dansk", name: "Dansk"),
         Language(code: "Suomi", name: "Suomi"),
         Language(code: "Svenska", name: "Svenska"),
