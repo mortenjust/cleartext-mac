@@ -63,7 +63,11 @@ class SimpleWords: NSObject {
         self.languageCode = languageCode
         let fileName = getFilenameForLanguageCode(languageCode)
         
-        let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "")!
+        guard let path = NSBundle.mainBundle().pathForResource(fileName, ofType: nil) else {
+            print("language not found")
+            return
+        }
+
         do {
             let text = try NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding)
             self.allWords = text.componentsSeparatedByString("\n")

@@ -93,7 +93,7 @@ class SimplerTextStorage: NSTextStorage {
     }
     
     override func attributesAtIndex(location: Int, effectiveRange range: NSRangePointer) -> [String : AnyObject] {
-        return backingStore.attributesAtIndex(location, effectiveRange: range)
+        return location < backingStore.length ? backingStore.attributesAtIndex(location, effectiveRange: range) : [:]
    }
     
     override func replaceCharactersInRange(range: NSRange, withString str: String) {
