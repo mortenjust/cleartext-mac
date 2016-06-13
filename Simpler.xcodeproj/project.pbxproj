@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8ACCA1F01D0E6A6F0097F8AB /* Kinder.txt in Resources */ = {isa = PBXBuildFile; fileRef = 8ACCA1EF1D0E6A6F0097F8AB /* Kinder.txt */; };
 		C802EE4C1D077599001DD9E3 /* русский.txt in Resources */ = {isa = PBXBuildFile; fileRef = C802EE4B1D077599001DD9E3 /* русский.txt */; };
 		C802EE4E1D0778B0001DD9E3 /* Norsk.txt in Resources */ = {isa = PBXBuildFile; fileRef = C802EE4D1D0778B0001DD9E3 /* Norsk.txt */; };
 		C82978611CAA337E00839628 /* Trump.txt in Resources */ = {isa = PBXBuildFile; fileRef = C82978601CAA337E00839628 /* Trump.txt */; };
@@ -43,6 +44,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		8ACCA1EF1D0E6A6F0097F8AB /* Kinder.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Kinder.txt; sourceTree = "<group>"; };
 		C802EE4B1D077599001DD9E3 /* русский.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "русский.txt"; sourceTree = "<group>"; };
 		C802EE4D1D0778B0001DD9E3 /* Norsk.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Norsk.txt; sourceTree = "<group>"; };
 		C82978601CAA337E00839628 /* Trump.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Trump.txt; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		C84079D81C0786FA002EC6D4 /* dictionaries */ = {
 			isa = PBXGroup;
 			children = (
+				8ACCA1EF1D0E6A6F0097F8AB /* Kinder.txt */,
 				C802EE4D1D0778B0001DD9E3 /* Norsk.txt */,
 				C802EE4B1D077599001DD9E3 /* русский.txt */,
 				FF3187B01CCEC611003E294A /* Português.txt */,
@@ -219,6 +222,7 @@
 				FF31878D1CCEAD68003E294A /* Français.txt in Resources */,
 				FF3187A11CCEBD87003E294A /* Íslenska.txt in Resources */,
 				FF3187891CCEAC79003E294A /* Nederlands.txt in Resources */,
+				8ACCA1F01D0E6A6F0097F8AB /* Kinder.txt in Resources */,
 				C86C6F451C01A5EF00A21B0A /* Assets.xcassets in Resources */,
 				FF3187811CCEAA69003E294A /* English.txt in Resources */,
 				FF3187B11CCEC611003E294A /* Português.txt in Resources */,
