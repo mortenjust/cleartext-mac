@@ -35,8 +35,6 @@ class SimpleWords: NSObject {
     }
     
     func isSimpleWord(_ word:String) -> Bool {
-//        print("checking \(word)")
-        
         // simple check first: One-letter words, numbers, contractions, go!
         if word.characters.count == 1 { return true }
         if word.characters.contains("'") { return true }
@@ -46,8 +44,6 @@ class SimpleWords: NSObject {
         }
         if String(word.characters.first!).rangeOfCharacter(from: CharacterSet.uppercaseLetters) != nil
         {return true}
-        
-//        print("not simple, using dictionary")
         
         getArray()
         
