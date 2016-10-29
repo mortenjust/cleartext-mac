@@ -10,8 +10,8 @@ import Cocoa
 
 protocol SimplerTextStorageDelegate {
     func simplerTextStorageGotComplexWord()
-    func simplerTextStorageGotComplexWordAtRange(range:NSRange)
-    func simplerTextStorageShouldChangeAtts(atts:[String:AnyObject])
+    func simplerTextStorageGotComplexWordAtRange(_ range:NSRange)
+    func simplerTextStorageShouldChangeAtts(_ atts:[String:AnyObject])
 }
 
 class SimplerTextStorage: NSTextStorage {
@@ -32,12 +32,12 @@ class SimplerTextStorage: NSTextStorage {
         fatalError("init(coder:) has not been implemented")
     }
 
-    required init?(pasteboardPropertyList propertyList: AnyObject, ofType type: String) {
+    required init?(pasteboardPropertyList propertyList: Any, ofType type: String) {
         fatalError("init(pasteboardPropertyList:ofType:) has not been implemented")
     }
     
 
-    func selectionDidChange(range:NSRange){
+    func selectionDidChange(_ range:NSRange){
 //        print("storage:selectionddichange")
     }
     
@@ -46,8 +46,8 @@ class SimplerTextStorage: NSTextStorage {
 
         if editedRange.length > 0 && editedRange.location < backingStore.string.characters.count  {
             
-            let token = tokenAtIndex(editedRange.location, inString: backingStore.string)
-            let word = NSString(string: backingStore.string).substringWithRange(token.range)
+            let token = tokenAtIndex(editedRange.location, inString: backingStore.string as NSString)
+            let word = NSString(string: backingStore.string).substring(with: token.range)
             
             if (token.token == NSLinguisticTagWhitespace            // check on spaces
                 || token.token == NSLinguisticTagPunctuation)       // check on punctuation like , and .
@@ -57,23 +57,23 @@ class SimplerTextStorage: NSTextStorage {
         }
     }
     
-    func performReplacementsForRange(changedRange: NSRange) {
+    func performReplacementsForRange(_ changedRange: NSRange) {
         let index = changedRange.location-1
         if index>=0 {
-            if let wordRange = wordRangeAtIndex(index, inString: string) {
+            if let wordRange = wordRangeAtIndex(index, inString: string as NSString) {
                 lookForBadWords(wordRange)
             }
         }
     }
     
-    func substringForRange(range:NSRange) -> String {
+    func substringForRange(_ range:NSRange) -> String {
 //        print("storagee:substinrgforfrange")
-        return String(NSString(string: self.string).substringWithRange(range))
+        return String(NSString(string: self.string).substring(with: range))
     }
     
     
-    func lookForBadWords(range:NSRange){
-        let word = NSString(string: string).substringWithRange(range)
+    func lookForBadWords(_ range:NSRange){
+        let word = NSString(string: string).substring(with: range)
         if word.characters.count == 0 { return }
 //        let timer = ParkBenchTimer()
 
@@ -84,52 +84,52 @@ class SimplerTextStorage: NSTextStorage {
         }
     }
     
-    func processBadWord(word:String, atRange range:NSRange){
+    func processBadWord(_ word:String, atRange range:NSRange){
         simpleDelegate?.simplerTextStorageGotComplexWord()
         simpleDelegate?.simplerTextStorageGotComplexWordAtRange(range)
     }
     
-    func processGoodWord(word:String, atRange range:NSRange){
+    func processGoodWord(_ word:String, atRange range:NSRange){
     }
     
-    override func attributesAtIndex(location: Int, effectiveRange range: NSRangePointer) -> [String : AnyObject] {
-        return backingStore.attributesAtIndex(location, effectiveRange: range)
+    override func attributes(at location: Int, effectiveRange range: NSRangePointer?) -> [String : Any] {
+        return backingStore.attributes(at: location, effectiveRange: range)
    }
     
-    override func replaceCharactersInRange(range: NSRange, withString str: String) {
+    override func replaceCharacters(in range: NSRange, with str: String) {
         beginEditing()
-        backingStore.replaceCharactersInRange(range, withString: str)
-        edited(.EditedCharacters, range: range, changeInLength: (str as NSString).length - range.length)
+        backingStore.replaceCharacters(in: range, with: str)
+        edited(.editedCharacters, range: range, changeInLength: (str as NSString).length - range.length)
         endEditing()
     }
     
-    override func setAttributes(attrs: [String : AnyObject]?, range: NSRange) {
+    override func setAttributes(_ attrs: [String : Any]?, range: NSRange) {
         beginEditing()
         backingStore.setAttributes(attrs, range: range)
-        edited(.EditedAttributes, range: range, changeInLength: 0)
+        edited(.editedAttributes, range: range, changeInLength: 0)
         endEditing()
     }
     
-    func tokenAtIndex(index:Int, inString str:NSString) -> (range:NSRange, token:String) {
+    func tokenAtIndex(_ index:Int, inString str:NSString) -> (range:NSRange, token:String) {
         let tokenType = NSLinguisticTagSchemeTokenType
         let tagger = NSLinguisticTagger(tagSchemes: [tokenType], options: 0)
         var r : NSRange = NSMakeRange(0, 0)
         tagger.string = str as String
-        let tag = tagger.tagAtIndex(index, scheme: tokenType, tokenRange: &r, sentenceRange: nil)
+        let tag = tagger.tag(at: index, scheme: tokenType, tokenRange: &r, sentenceRange: nil)
         return(range:r, token:tag!)
     }
     
     
     
-    func wordRangeAtIndex(index:Int, inString str:NSString) -> NSRange? {
-        let options = (NSLinguisticTaggerOptions.OmitWhitespace.rawValue)
+    func wordRangeAtIndex(_ index:Int, inString str:NSString) -> NSRange? {
+        let options = (NSLinguisticTagger.Options.omitWhitespace.rawValue)
         let tagger = NSLinguisticTagger(tagSchemes: [NSLinguisticTagSchemeTokenType],
                                         options: Int(options))
         
         var r : NSRange = NSMakeRange(0,0)
         tagger.string = str as String
         
-        let tag = tagger.tagAtIndex(index, scheme: NSLinguisticTagSchemeTokenType, tokenRange: &r, sentenceRange: nil)
+        let tag = tagger.tag(at: index, scheme: NSLinguisticTagSchemeTokenType, tokenRange: &r, sentenceRange: nil)
 
         if tag == NSLinguisticTagWord {
             return r

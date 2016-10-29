@@ -19,54 +19,54 @@ class SimpleWords: NSObject {
         }
     }
 
-    func loadDictionaryForCode(code:String){
+    func loadDictionaryForCode(_ code:String){
         readWordsForLanguage(code)
     }
     
     func loadDictionaryFromPrefs(){
-        if let languageCode = NSUserDefaults.standardUserDefaults().stringForKey("language") {
+        if let languageCode = UserDefaults.standard.string(forKey: "language") {
             print("reading words for \(languageCode)")
             readWordsForLanguage(languageCode)
         }
     }
     
-    func getFilenameForLanguageCode(languageCode:String) -> String {
+    func getFilenameForLanguageCode(_ languageCode:String) -> String {
         return "\(languageCode).txt" // if we decide to show a more human readable name, this func will be the place
     }
     
-    func isSimpleWord(word:String) -> Bool {
+    func isSimpleWord(_ word:String) -> Bool {
 //        print("checking \(word)")
         
         // simple check first: One-letter words, numbers, contractions, go!
         if word.characters.count == 1 { return true }
         if word.characters.contains("'") { return true }
-        let digits = NSCharacterSet.decimalDigitCharacterSet()
-        if digits.longCharacterIsMember((word.unicodeScalars.first?.value)!) {
+        let digits = CharacterSet.decimalDigits
+        if digits.contains(UnicodeScalar((word.unicodeScalars.first?.value)!)!) {
             return true
         }
-        if String(word.characters.first!).rangeOfCharacterFromSet(NSCharacterSet.uppercaseLetterCharacterSet()) != nil
+        if String(word.characters.first!).rangeOfCharacter(from: CharacterSet.uppercaseLetters) != nil
         {return true}
         
 //        print("not simple, using dictionary")
         
         getArray()
         
-        if allWords.contains(word.lowercaseString) {
+        if allWords.contains(word.lowercased()) {
             return true
         }
         
         return false
     }
     
-    func readWordsForLanguage(languageCode:String = "English"){
+    func readWordsForLanguage(_ languageCode:String = "English"){
         print("loading file for \(languageCode)")
         self.languageCode = languageCode
         let fileName = getFilenameForLanguageCode(languageCode)
         
-        let path = NSBundle.mainBundle().pathForResource(fileName, ofType: "")!
+        let path = Bundle.main.path(forResource: fileName, ofType: "")!
         do {
-            let text = try NSString(contentsOfFile: path, encoding: NSUTF8StringEncoding)
-            self.allWords = text.componentsSeparatedByString("\n")
+            let text = try NSString(contentsOfFile: path, encoding: String.Encoding.utf8.rawValue)
+            self.allWords = text.components(separatedBy: "\n")
         } catch {
             print("read didn't work")
             return

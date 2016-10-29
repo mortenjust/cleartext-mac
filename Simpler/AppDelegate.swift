@@ -14,18 +14,18 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     @IBOutlet weak var languageMenu: NSMenuItem!
     
 
-    @IBAction func languageClicked(sender: NSMenuItem) {
+    @IBAction func languageClicked(_ sender: NSMenuItem) {
         print("you clicked language")
     }
 
 
-    func applicationDidFinishLaunching(aNotification: NSNotification) {
+    func applicationDidFinishLaunching(_ aNotification: Notification) {
         // Insert code here to initialize your application
         
-        let ud = NSUserDefaults.standardUserDefaults()
-        ud.registerDefaults(C.defaultPrefValues)
+        let ud = UserDefaults.standard
+        ud.register(defaults: C.defaultPrefValues)
         
-        if ud.stringForKey("language") == "" { ud.setValue("English", forKey: "language") }
+        if ud.string(forKey: "language") == "" { ud.setValue("English", forKey: "language") }
     }
     
     
@@ -33,7 +33,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     
 
 
-    func applicationWillTerminate(aNotification: NSNotification) {
+    func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
     }
 

@@ -10,7 +10,7 @@ import Cocoa
 import Quartz
 
 protocol SimplerTextViewDelegate {
-    func simplerTextViewKeyUp(character:String)
+    func simplerTextViewKeyUp(_ character:String)
     func simplerTextViewGotComplexWord()
 }
 
@@ -23,14 +23,14 @@ class SimplerTextView: NSTextView, SimplerTextStorageDelegate {
         wantsLayer = true
         simplerStorage = SimplerTextStorage()
         simplerStorage.simpleDelegate = self
-        simplerStorage.addLayoutManager(layoutManager!)
+//        simplerStorage.addLayoutManager(layoutManager!)
         layoutManager?.replaceTextStorage(simplerStorage)
 
         resetFormatting()
-        NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(SimplerTextView.selectionDidChange(_:)), name: NSTextViewDidChangeSelectionNotification, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(SimplerTextView.selectionDidChange(_:)), name: NSNotification.Name.NSTextViewDidChangeSelection, object: nil)
     }
     
-    func selectionDidChange(n:NSNotification){
+    func selectionDidChange(_ n:Notification){
 //        Swift.print("view:selectiondidchange")
 //        Swift.print("---inwhich the selected range is \(self.selectedRange())")
          simplerStorage.selectionDidChange(self.selectedRange())
@@ -42,23 +42,23 @@ class SimplerTextView: NSTextView, SimplerTextStorageDelegate {
     }
     
     
-    func simplerTextStorageGotComplexWordAtRange(range:NSRange) {
+    func simplerTextStorageGotComplexWordAtRange(_ range:NSRange) {
         simplerDelegate.simplerTextViewGotComplexWord()
         
-        if(NSUserDefaults.standardUserDefaults().boolForKey(C.PREF_FORCESELECT)){
+        if(UserDefaults.standard.bool(forKey: C.PREF_FORCESELECT)){
             setSelectedRange(range)
             }
     }
     
-    func simplerTextStorageShouldChangeAtts(atts: [String : AnyObject]) {
+    func simplerTextStorageShouldChangeAtts(_ atts: [String : AnyObject]) {
         
     }
     
-    override func shouldChangeTextInRange(affectedCharRange: NSRange, replacementString: String?) -> Bool {
+    override func shouldChangeText(in affectedCharRange: NSRange, replacementString: String?) -> Bool {
         return true
     }
     
-    override func shouldChangeTextInRanges(affectedRanges: [NSValue], replacementStrings: [String]?) -> Bool {
+    override func shouldChangeText(inRanges affectedRanges: [NSValue], replacementStrings: [String]?) -> Bool {
         return true
     }
     
@@ -73,8 +73,8 @@ class SimplerTextView: NSTextView, SimplerTextStorageDelegate {
         
     }
     
-    override func drawRect(dirtyRect: NSRect) {
-        super.drawRect(dirtyRect)
+    override func draw(_ dirtyRect: NSRect) {
+        super.draw(dirtyRect)
         // Drawing code here.
     }
 }
