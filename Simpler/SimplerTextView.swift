@@ -43,7 +43,8 @@ class SimplerTextView: NSTextView, SimplerTextStorageDelegate {
     
     
     func simplerTextStorageGotComplexWordAtRange(_ range:NSRange) {
-        simplerDelegate.simplerTextViewGotComplexWord()
+        //simplerDelegate.simplerTextViewGotComplexWord()
+        // so to not duplicate the effect
         
         if(UserDefaults.standard.bool(forKey: C.PREF_FORCESELECT)){
             setSelectedRange(range)

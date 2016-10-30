@@ -91,8 +91,13 @@ class ViewController: NSViewController, SimplerTextViewDelegate {
     }
     
     func simplerTextViewGotComplexWord() {
+        print("got complex")
         playBeginAnimation { () -> Void in
-            self.playEndAnimation({ () -> Void in })
+            self.playMiddleAnimation({ () -> Void in
+                self.playEndAnimation {
+                    //
+                }
+            })
         }
         makeBadSound()
     }
@@ -100,31 +105,39 @@ class ViewController: NSViewController, SimplerTextViewDelegate {
     
     
     func playBeginAnimation(_ completion:@escaping ()->Void){
-        editorScrollView.wantsLayer = true
-        editorScrollView.layerContentsRedrawPolicy = .onSetNeedsDisplay
-        
+        print("start animation")
         NSAnimationContext.runAnimationGroup({ (context) in
-            // let's do this
-            win.animator().setFrameOrigin(win.frame.offsetBy(dx: 3, dy: 0).origin)
+            context.duration = 0.10
+            let f = win.frame
+            let fo = win.frame.origin
+            win.animator().setFrame(NSMakeRect(fo.x+10, fo.y, f.width, f.height), display: true)
         }, completionHandler: {
-            // when done
             completion()
         })
 
     }
     
-    func playEndAnimation(_ completion:@escaping ()->Void){
-        editorScrollView.wantsLayer = true
-        editorScrollView.layerContentsRedrawPolicy = .onSetNeedsDisplay
-        
+    func playMiddleAnimation(_ completion:@escaping ()->Void){
+        print("end animation")
         NSAnimationContext.runAnimationGroup({ (context) in
-            // let's do this
-            context.duration = 0.30
-            
-            win.animator().setFrameOrigin(win.frame.offsetBy(dx: -3, dy: 0).origin)
+            context.duration = 0.10
+            let f = win.frame
+            let fo = win.frame.origin
+            win.animator().setFrame(NSMakeRect(fo.x-20, fo.y, f.width, f.height), display: true)
         }, completionHandler: {
-            // when done
             completion()
+        })
+    }
+    
+    func playEndAnimation(_ completion:@escaping ()->Void){
+        print("end animation")
+        NSAnimationContext.runAnimationGroup({ (context) in
+            context.duration = 0.10
+            let f = win.frame
+            let fo = win.frame.origin
+            win.animator().setFrame(NSMakeRect(fo.x+10, fo.y, f.width, f.height), display: true)
+        }, completionHandler: {
+             completion()
         })
     }
     
