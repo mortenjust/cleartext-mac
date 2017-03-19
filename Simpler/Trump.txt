@@ -979,3 +979,5 @@ about
 mode
 entire
 huge
+winning
+bigly
