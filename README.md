@@ -1,5 +1,7 @@
 # Cleartext
 
+UPDATE January 2020: See <a href="https://textato.com">Textato</a> for an updated version of this app. 
+
 ### <a href="https://github.com/mortenjust/cleartext-mac/releases">Download for Mac 10.11+</a>
 Follow <a href="http://twitter.com/mortenjust">@mortenjust</a> on Twitter for updates. 
 
